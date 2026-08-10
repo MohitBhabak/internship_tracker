@@ -5,6 +5,8 @@ import re
 import sys
 from pathlib import Path
 
+from job_filters import is_us
+
 TR_RE = re.compile(r"<tr>(.*?)</tr>", re.DOTALL)
 TD_RE = re.compile(r"<td[^>]*>(.*?)</td>", re.DOTALL)
 COMPANY_RE = re.compile(
@@ -22,7 +24,9 @@ SEEN_PATH = "snapshots/seen.json"
 
 # Both boards group listings under "## <emoji> <Category> Internship Roles"
 # headers. Only the Software Engineering section should produce alerts —
-# Product, Data Science/AI/ML, Quant, and Hardware rows are skipped.
+# Product Management, Data Science/AI/ML, Quant, and Hardware rows are
+# skipped. Within that section, rows are further limited to US locations
+# by job_filters.is_us().
 SWE_SECTION_RE = re.compile(
     r"^##[^\n]*Software Engineering Internship Roles(.*?)(?=^## |\Z)",
     re.DOTALL | re.MULTILINE,
@@ -87,6 +91,8 @@ def parse_rows(path: str) -> dict:
             continue
         role = strip_html(tds[1])
         location = strip_html(tds[2])
+        if not is_us(location):
+            continue
         # The apply cell is tds[3] on the main board but tds[4] on the
         # off-season board (extra "Terms" column), so search the whole row.
         apply_match = APPLY_RE.search(block)
@@ -208,7 +214,7 @@ def render_html(new_main: list, new_off: list) -> str:
         f'<h1 style="font-size:18px;margin:0 0 4px;color:#111;">'
         f'{total} new internship listing{"s" if total != 1 else ""}</h1>'
         '<p style="font-size:12px;color:#888;margin:0 0 8px;">'
-        'Software engineering roles on the SimplifyJobs Summer 2026 boards.</p>'
+        'US software engineering roles on the SimplifyJobs Summer 2026 boards.</p>'
         f'{section("Main Board (Summer 2026)", new_main)}'
         f'{section("Off-Season Board", new_off)}'
         '<hr style="border:0;border-top:1px solid #eee;margin:20px 0 8px;">'

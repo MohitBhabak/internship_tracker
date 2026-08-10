@@ -1,9 +1,11 @@
-"""Poll company ATS boards (Greenhouse / Lever / Ashby) for new US
-backend / infrastructure / DevOps intern roles and emit an email via
-GITHUB_OUTPUT, mirroring parse_boards.py.
+"""Poll company ATS boards (Greenhouse / Lever / Ashby) for new US software
+engineering intern roles (general SWE, full-stack, frontend, backend,
+infra/platform, product engineering) and emit an email via GITHUB_OUTPUT,
+mirroring parse_boards.py.
 
 Postings hit the ATS before LinkedIn or the SimplifyJobs boards pick them
-up, so this is the fastest signal. Companies live in ats_companies.json.
+up, so this is the fastest signal. Companies live in ats_companies.json;
+the title/location filters live in job_filters.py.
 """
 
 import html
@@ -16,115 +18,13 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+from job_filters import is_us, wanted_title
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 COMPANIES_PATH = SCRIPT_DIR / "ats_companies.json"
 SEEN_PATH = Path("snapshots/ats-seen.json")
 
-INTERN_RE = re.compile(r"\bintern(ship)?\b|\bco[- ]?op\b", re.I)
-
-# Backend-shaped titles. Generic "Software Engineer Intern" counts — big
-# companies rarely label the specialization — and the exclude list below
-# strips the ones that declare a non-backend focus.
-ROLE_RE = re.compile(
-    r"back[- ]?end|server|infrastructure|\binfra\b|platform|dev[- ]?ops|"
-    r"site reliability|\bsre\b|cloud|distributed|full[- ]?stack|"
-    r"software (engineer|engineering|developer|development)|\bswe\b",
-    re.I,
-)
-
-EXCLUDE_RE = re.compile(
-    r"front[- ]?end|mobile|\bios\b|android|data scien|data analy|"
-    r"analytics|business|"
-    r"hardware|electrical|mechanical|manufactur|embedded|firmware|silicon|"
-    r"\basic\b|fpga|\brf\b|optic|quality|\bqa\b|\btest\b|security|"
-    r"research (scientist|engineer)|design(er)?\b|\bui\b|\bux\b|graphics|"
-    r"product manag|marketing|"
-    r"sales|solutions|support|success|recruit|people|legal|finance|"
-    r"accounting|supply chain",
-    re.I,
-)
-
-# AI/ML terms only disqualify when the title isn't clearly a software
-# engineering role — "Software Engineer Intern, AI Platform" is a backend
-# role, "Machine Learning Intern" is not.
-AI_EXCLUDE_RE = re.compile(
-    r"machine learning|\bml\b|\bai\b|artificial intelligence|deep learning",
-    re.I,
-)
-
-SWE_RE = re.compile(
-    r"software (engineer|engineering|developer|development)|back[- ]?end|"
-    r"infrastructure|\binfra\b|dev[- ]?ops|site reliability|\bsre\b",
-    re.I,
-)
-
-US_HINT_RE = re.compile(
-    r"united states|\busa?\b|u\.s\.|remote.*(us|america)|"
-    r"alabama|alaska|arizona|arkansas|california|colorado|connecticut|"
-    r"delaware|florida|georgia|hawaii|idaho|illinois|indiana|iowa|kansas|"
-    r"kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|"
-    r"mississippi|missouri|montana|nebraska|nevada|new hampshire|"
-    r"new jersey|new mexico|new york|north carolina|north dakota|ohio|"
-    r"oklahoma|oregon|pennsylvania|rhode island|south carolina|"
-    r"south dakota|tennessee|texas|utah|vermont|virginia|washington|"
-    r"west virginia|wisconsin|wyoming|"
-    r"san francisco|\bnyc\b|seattle|austin|boston|chicago|denver|atlanta|"
-    r"los angeles|mountain view|palo alto|sunnyvale|san jose|menlo park|"
-    r"bellevue|redmond|\bd\.?c\.?\b|miami|dallas|houston|philadelphia|"
-    r"pittsburgh|portland|san diego|santa clara|cupertino|irvine|"
-    r"nashville|charlotte|phoenix|salt lake|"
-    r",\s?(AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|"
-    r"MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|"
-    r"TN|TX|UT|VT|VA|WA|WV|WI|WY)\b",
-    re.I,
-)
-
-NON_US_RE = re.compile(
-    r"canada|ontario|toronto|vancouver|montr[eé]al|quebec|calgary|ottawa|"
-    r"waterloo|british columbia|united kingdom|\buk\b|london|ireland|"
-    r"dublin|germany|berlin|munich|france|paris|netherlands|amsterdam|"
-    r"belgium|spain|madrid|barcelona|portugal|lisbon|italy|milan|"
-    r"switzerland|zurich|geneva|austria|vienna|poland|warsaw|krakow|"
-    r"czech|prague|sweden|stockholm|norway|oslo|denmark|copenhagen|"
-    r"finland|helsinki|estonia|tallinn|romania|bucharest|hungary|"
-    r"budapest|israel|tel aviv|\buae\b|dubai|abu dhabi|saudi|riyadh|"
-    r"india|bangalore|bengaluru|hyderabad|mumbai|delhi|gurgaon|gurugram|"
-    r"chennai|pune|noida|singapore|malaysia|kuala lumpur|indonesia|"
-    r"jakarta|vietnam|thailand|bangkok|philippines|manila|china|beijing|"
-    r"shanghai|shenzhen|hangzhou|hong kong|taiwan|taipei|japan|tokyo|"
-    r"osaka|korea|seoul|australia|sydney|melbourne|brisbane|new zealand|"
-    r"auckland|brazil|paulo|mexico|guadalajara|argentina|buenos aires|"
-    r"colombia|bogot|chile|santiago|nigeria|lagos|egypt|cairo|kenya|"
-    r"nairobi|south africa|turkey|istanbul|ukraine|kyiv|serbia|belgrade|"
-    r"bulgaria|sofia|croatia|zagreb|lithuania|vilnius|latvia|riga|"
-    r"armenia|yerevan|cyprus|malta|luxembourg|emea|apac|latam|"
-    r",\s?(?-i:ON|QC|BC|AB|MB|SK|NS|NB|NL|PE|YT)\b",
-    re.I,
-)
-
 WHITESPACE_RE = re.compile(r"\s+")
-
-
-def wanted_title(title: str) -> bool:
-    if not (INTERN_RE.search(title) and ROLE_RE.search(title)):
-        return False
-    if EXCLUDE_RE.search(title):
-        return False
-    if AI_EXCLUDE_RE.search(title) and not SWE_RE.search(title):
-        return False
-    return True
-
-
-def is_us(location: str) -> bool:
-    """US hint wins, then a clearly-foreign hint loses; ambiguous strings
-    (bare "Remote", city-only names) are kept rather than dropped."""
-    if not location:
-        return True
-    if US_HINT_RE.search(location):
-        return True
-    if NON_US_RE.search(location):
-        return False
-    return True
 
 
 def fetch_json(url: str):
@@ -242,10 +142,10 @@ def render_html(items: list) -> str:
         '<div style="max-width:640px;margin:0 auto;background:#fff;padding:24px;'
         'border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.08);">'
         f'<h1 style="font-size:18px;margin:0 0 4px;color:#111;">'
-        f'{len(items)} new backend/infra intern role{"s" if len(items) != 1 else ""}</h1>'
+        f'{len(items)} new SWE intern role{"s" if len(items) != 1 else ""}</h1>'
         '<p style="font-size:12px;color:#888;margin:0 0 8px;">'
-        'Straight from company ATS boards (Greenhouse / Lever / Ashby) — '
-        'usually before LinkedIn.</p>'
+        'US software engineering internships — straight from company ATS '
+        'boards (Greenhouse / Lever / Ashby), usually before LinkedIn.</p>'
         '<table cellpadding="0" cellspacing="0" border="0" '
         'style="width:100%;border-collapse:collapse;">'
         + "\n".join(rows) +
@@ -260,7 +160,7 @@ def render_html(items: list) -> str:
 
 
 def render_plain(items: list) -> str:
-    lines = [f"{len(items)} new backend/infra intern role(s)", ""]
+    lines = [f"{len(items)} new SWE intern role(s)", ""]
     for it in items:
         lines.append(f"  {it['company']} - {it['title']}")
         lines.append(f"    Location: {it['location'] or '(not listed)'}")
@@ -275,7 +175,7 @@ def build_subject(items: list) -> str:
     preview = ", ".join(unique[:3])
     suffix = f" +{len(unique) - 3} more" if len(unique) > 3 else ""
     plural = "s" if len(items) != 1 else ""
-    return f"{len(items)} new backend intern role{plural} (ATS): {preview}{suffix}"
+    return f"{len(items)} new SWE intern role{plural} (ATS): {preview}{suffix}"
 
 
 def main():
