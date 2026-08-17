@@ -24,15 +24,21 @@ jobs:
       - name: Checkout this repo
         uses: actions/checkout@v4
 
+      # Fetched in parallel: the off-season board is ~1 MB and dominates the
+      # wall time, so overlapping the two saves most of the smaller fetch.
       - name: Fetch latest versions of both Simplify boards
         run: |
           mkdir -p snapshots
-          curl -sS --retry 3 --retry-delay 2 --max-time 30 \
-            https://raw.githubusercontent.com/SimplifyJobs/Summer2026-Internships/dev/README.md \
-            -o current-main.md
-          curl -sS --retry 3 --retry-delay 2 --max-time 30 \
-            https://raw.githubusercontent.com/SimplifyJobs/Summer2026-Internships/dev/README-Off-Season.md \
-            -o current-offseason.md
+          base=https://raw.githubusercontent.com/SimplifyJobs/Summer2026-Internships/dev
+          curl -sSf --retry 3 --retry-delay 2 --max-time 30 \
+            "$base/README.md" -o current-main.md &
+          pid_main=$!
+          curl -sSf --retry 3 --retry-delay 2 --max-time 30 \
+            "$base/README-Off-Season.md" -o current-offseason.md &
+          pid_off=$!
+          wait $pid_main || { echo "main board fetch failed"; exit 1; }
+          wait $pid_off  || { echo "off-season board fetch failed"; exit 1; }
+          wc -c current-main.md current-offseason.md
 
       - name: Parse Simplify boards and build email
         id: simplify
