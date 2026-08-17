@@ -114,6 +114,14 @@ def collect_matches() -> tuple:
     return matches, failed
 
 
+def get_logs_url() -> str:
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    server = os.environ.get("GITHUB_SERVER_URL", "https://github.com")
+    if repo:
+        return f"{server}/{repo}/actions"
+    return "https://github.com"
+
+
 def render_html(items: list) -> str:
     rows = []
     for it in items:
@@ -153,7 +161,7 @@ def render_html(items: list) -> str:
         '<hr style="border:0;border-top:1px solid #eee;margin:20px 0 8px;">'
         '<p style="color:#aaa;font-size:11px;margin:0;">'
         'Sent by internship-watcher (ATS) · '
-        '<a href="https://github.com/jkhatri23/internship-watcher-standalone/actions" '
+        f'<a href="{get_logs_url()}" '
         'style="color:#aaa;">workflow logs</a></p>'
         '</div></body></html>'
     )

@@ -162,6 +162,14 @@ def dedupe_for_display(new_main: list, new_off: list) -> tuple:
     return out_main, out_off
 
 
+def get_logs_url() -> str:
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    server = os.environ.get("GITHUB_SERVER_URL", "https://github.com")
+    if repo:
+        return f"{server}/{repo}/actions"
+    return "https://github.com"
+
+
 def render_html(new_main: list, new_off: list) -> str:
     def section(title: str, items: list) -> str:
         if not items:
@@ -214,13 +222,13 @@ def render_html(new_main: list, new_off: list) -> str:
         f'<h1 style="font-size:18px;margin:0 0 4px;color:#111;">'
         f'{total} new internship listing{"s" if total != 1 else ""}</h1>'
         '<p style="font-size:12px;color:#888;margin:0 0 8px;">'
-        'US software engineering roles on the SimplifyJobs Summer 2026 boards.</p>'
-        f'{section("Main Board (Summer 2026)", new_main)}'
+        'US software engineering roles on SimplifyJobs boards.</p>'
+        f'{section("Main Board", new_main)}'
         f'{section("Off-Season Board", new_off)}'
         '<hr style="border:0;border-top:1px solid #eee;margin:20px 0 8px;">'
         '<p style="color:#aaa;font-size:11px;margin:0;">'
         'Sent by internship-watcher · '
-        '<a href="https://github.com/jkhatri23/internship-watcher-standalone/actions" '
+        f'<a href="{get_logs_url()}" '
         'style="color:#aaa;">workflow logs</a></p>'
         '</div></body></html>'
     )
