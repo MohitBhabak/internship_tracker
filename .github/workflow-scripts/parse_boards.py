@@ -5,7 +5,7 @@ import re
 import sys
 from pathlib import Path
 
-from job_filters import is_us
+from job_filters import is_us, wanted_title
 
 TR_RE = re.compile(r"<tr>(.*?)</tr>", re.DOTALL)
 TD_RE = re.compile(r"<td[^>]*>(.*?)</td>", re.DOTALL)
@@ -21,27 +21,6 @@ TAG_RE = re.compile(r"<[^>]+>")
 WHITESPACE_RE = re.compile(r"\s+")
 
 SEEN_PATH = "snapshots/seen.json"
-
-# Both boards group listings under "## <emoji> <Category> Internship Roles"
-# headers. Only the Software Engineering section should produce alerts —
-# Product Management, Data Science/AI/ML, Quant, and Hardware rows are
-# skipped. Within that section, rows are further limited to US locations
-# by job_filters.is_us().
-SWE_SECTION_RE = re.compile(
-    r"^##[^\n]*Software Engineering Internship Roles(.*?)(?=^## |\Z)",
-    re.DOTALL | re.MULTILINE,
-)
-
-
-def swe_section(text: str) -> str:
-    m = SWE_SECTION_RE.search(text)
-    if m:
-        return m.group(1)
-    # Header not found (board format changed): fall back to the whole file
-    # so new roles are never silently dropped.
-    print("WARNING: Software Engineering section header not found; "
-          "parsing entire board", file=sys.stderr)
-    return text
 
 
 def strip_html(fragment: str) -> str:
@@ -65,15 +44,11 @@ def row_id(block: str, company: str, role: str, location: str, apply_url: str) -
 
 
 def parse_rows(path: str) -> dict:
-    """Return {stable_id: row} for every ACTIVE listing in the board file.
-
-    Rows without an Apply link are closed/archived listings (the boards embed
-    an "Inactive roles" archive with thousands of old rows) and are skipped —
-    they were the source of old internships being emailed as new.
-    """
+    """Return {stable_id: row} for every ACTIVE listing in the board file
+    matching Product Management, TPM, Project Management, and Operations."""
     if not os.path.exists(path):
         return {}
-    text = swe_section(Path(path).read_text(encoding="utf-8", errors="replace"))
+    text = Path(path).read_text(encoding="utf-8", errors="replace")
     rows = {}
     last_company = None
     for block in TR_RE.findall(text):
@@ -91,6 +66,8 @@ def parse_rows(path: str) -> dict:
             continue
         role = strip_html(tds[1])
         location = strip_html(tds[2])
+        if not wanted_title(role):
+            continue
         if not is_us(location):
             continue
         # The apply cell is tds[3] on the main board but tds[4] on the
@@ -220,9 +197,9 @@ def render_html(new_main: list, new_off: list) -> str:
         '<div style="max-width:640px;margin:0 auto;background:#fff;padding:24px;'
         'border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.08);">'
         f'<h1 style="font-size:18px;margin:0 0 4px;color:#111;">'
-        f'{total} new internship listing{"s" if total != 1 else ""}</h1>'
+        f'{total} new PM / TPM / Project / Ops internship{"s" if total != 1 else ""}</h1>'
         '<p style="font-size:12px;color:#888;margin:0 0 8px;">'
-        'US software engineering roles on SimplifyJobs boards.</p>'
+        'US Product Management, TPM, Project Management, and Operations roles on SimplifyJobs boards.</p>'
         f'{section("Main Board", new_main)}'
         f'{section("Off-Season Board", new_off)}'
         '<hr style="border:0;border-top:1px solid #eee;margin:20px 0 8px;">'
@@ -236,8 +213,8 @@ def render_html(new_main: list, new_off: list) -> str:
 
 def render_plain(new_main: list, new_off: list) -> str:
     total = len(new_main) + len(new_off)
-    lines = [f"{total} new internship listing(s)", ""]
-    for title, items in [("MAIN BOARD (Summer 2026)", new_main), ("OFF-SEASON BOARD", new_off)]:
+    lines = [f"{total} new PM / TPM / Project / Ops internship(s)", ""]
+    for title, items in [("MAIN BOARD", new_main), ("OFF-SEASON BOARD", new_off)]:
         lines.append(f"== {title}: {len(items)} new ==")
         if not items:
             lines.append("  (none)")
@@ -252,13 +229,13 @@ def render_plain(new_main: list, new_off: list) -> str:
 def build_subject(new_main: list, new_off: list) -> str:
     total = len(new_main) + len(new_off)
     if total == 0:
-        return "No new internship listings"
+        return "No new PM/TPM/Ops internship listings"
     companies = [it["company"] for it in new_main + new_off]
     unique = list(dict.fromkeys(companies))
     preview = ", ".join(unique[:3])
     suffix = f" +{len(unique) - 3} more" if len(unique) > 3 else ""
     plural = "s" if total != 1 else ""
-    return f"{total} new internship{plural}: {preview}{suffix}"
+    return f"{total} new PM/TPM/Ops internship{plural}: {preview}{suffix}"
 
 
 def main():

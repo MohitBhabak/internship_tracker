@@ -1,58 +1,49 @@
-"""Shared title / location filters for both watchers.
+"""Shared title / location filters for Product Management, TPM, Project Management, and Operations watchers.
 
-The target profile is a US-based general software engineering internship:
-generic SWE, full-stack, frontend, backend, infrastructure/platform, and
-product *engineering*. Product management, data science/ML, hardware, QA,
-security, and non-engineering roles are out.
+The target profile includes:
+- Product Management (PM, APM, Product Manager, Product Ops, Product Analyst, Product Strategy)
+- Technical Program Management (TPM, Technical Program Manager, Program Manager)
+- Project Management (Project Manager, Project Coordinator, Project Lead)
+- Operations (Business Operations, BizOps, TechOps, Strategy & Operations, Operations Analyst, People/Sales/Revenue/Supply Chain Ops)
 
-parse_boards.py uses only the location half (the Simplify board already
-scopes rows to its Software Engineering section); ats_watcher.py uses both
-halves, since an ATS board is one undifferentiated list of every open req.
+Pure Software Engineering, developer, hardware, and data science roles are excluded unless they are PM/TPM/Project Management roles.
 """
 
 import re
 
-INTERN_RE = re.compile(r"\bintern(ship)?\b|\bco[- ]?op\b", re.I)
-
-# Titles that count as in-profile. Generic "Software Engineer Intern" is the
-# common case — big companies rarely label the specialization — and EXCLUDE_RE
-# below strips the ones that declare an out-of-profile focus.
-ROLE_RE = re.compile(
-    r"software (engineer|engineering|developer|development)|\bswe\b|"
-    r"back[- ]?end|front[- ]?end|full[- ]?stack|"
-    r"web (developer|development|engineer)|"
-    r"product (engineer|engineering)|application(s)? (engineer|developer)|"
-    r"\bdeveloper\b|server|infrastructure|\binfra\b|platform|dev[- ]?ops|"
-    r"site reliability|\bsre\b|cloud|distributed",
+INTERN_RE = re.compile(
+    r"\bintern(ship)?\b|\bco[- ]?op\b|\bstudent\b|\bfellow(ship)?\b|\bapprentice(ship)?\b",
     re.I,
 )
 
-EXCLUDE_RE = re.compile(
-    r"mobile|\bios\b|android|"
-    r"data scien|data analy|data engineer|analytics|business|"
-    r"hardware|electrical|mechanical|manufactur|embedded|firmware|silicon|"
-    r"\basic\b|fpga|\brf\b|optic|quality|\bqa\b|\btest\b|security|"
-    r"research (scientist|engineer)|designer\b|\bux\b|user experience|"
-    r"graphics|\bgame\b|quantitative|\bquant\b|"
-    r"product manag|program manag|project manag|technical program|"
-    r"marketing|sales|solutions|support|success|recruit|people|legal|"
-    r"finance|accounting|supply chain|"
-    r"advocate|evangelis|developer relations",
+# PM, TPM, and Project Management roles
+PM_TPM_PROJECT_RE = re.compile(
+    r"\bproduct manage|\bproduct manager\b|\bproduct management\b|\bapm\b|"
+    r"\bproduct intern\b|\bproduct ops\b|\bproduct operations\b|\bproduct strategy\b|\bproduct analyst\b|"
+    r"\btechnical program\b|\btpm\b|\bprogram manage|\bprogram manager\b|\bprogram management\b|"
+    r"\bproject manage|\bproject manager\b|\bproject management\b|\bproject coordinator\b|\bproject lead\b|"
+    r"\bproject analyst\b|\bproject specialist\b|\bprogram coordinator\b",
     re.I,
 )
 
-# AI/ML terms only disqualify when the title isn't clearly a software
-# engineering role — "Software Engineer Intern, AI Platform" is in profile,
-# "Machine Learning Intern" is not.
-AI_EXCLUDE_RE = re.compile(
-    r"machine learning|\bml\b|\bai\b|artificial intelligence|deep learning",
+# Operations roles
+OPERATIONS_RE = re.compile(
+    r"\boperations\b|\bbizops\b|\bbusiness operations\b|\btechops\b|\btechnical operations\b|"
+    r"\bstrategy & operations\b|\bstrategy and operations\b|\boperations analyst\b|\boperations intern\b|"
+    r"\bpeople operations\b|\bsales operations\b|\bmarketing operations\b|\brevenue operations\b|\brevops\b|"
+    r"\bsupply chain operations\b|\bclinical operations\b|\bfield operations\b|\boperations associate\b|"
+    r"\boperations specialist\b|\boperations coordinator\b|\boperations lead\b|\boperations management\b|"
+    r"\boperations program\b",
     re.I,
 )
 
-SWE_RE = re.compile(
-    r"software (engineer|engineering|developer|development)|\bswe\b|"
-    r"back[- ]?end|front[- ]?end|full[- ]?stack|product engineer|"
-    r"infrastructure|\binfra\b|platform|dev[- ]?ops|site reliability|\bsre\b",
+# Pure SWE / Hardware / Developer keywords to exclude when NOT part of PM/TPM/Project Management
+EXCLUDE_DEV_RE = re.compile(
+    r"\bsoftware\b|\bdeveloper\b|\bdevelopment\b|\bswe\b|"
+    r"\bhardware\b|\belectrical\b|\bmechanical\b|\bfirmware\b|\bsilicon\b|"
+    r"\bsdet\b|\bqa\b|\btest engineer\b|\bquality assurance\b|"
+    r"full[- ]?stack|front[- ]?end|back[- ]?end|"
+    r"machine learning|data scien",
     re.I,
 )
 
@@ -102,14 +93,17 @@ NON_US_RE = re.compile(
 
 
 def wanted_title(title: str) -> bool:
-    """True for an in-profile internship title on a raw ATS board."""
-    if not (INTERN_RE.search(title) and ROLE_RE.search(title)):
+    """True for an in-profile PM, TPM, Project Management, or Operations internship."""
+    # PM, TPM, and Project Management roles are always matched
+    if PM_TPM_PROJECT_RE.search(title):
+        return True
+    # Pure software / hardware / dev roles without PM/TPM/Project are excluded
+    if EXCLUDE_DEV_RE.search(title):
         return False
-    if EXCLUDE_RE.search(title):
-        return False
-    if AI_EXCLUDE_RE.search(title) and not SWE_RE.search(title):
-        return False
-    return True
+    # Operations roles
+    if OPERATIONS_RE.search(title):
+        return True
+    return False
 
 
 def is_us(location: str) -> bool:

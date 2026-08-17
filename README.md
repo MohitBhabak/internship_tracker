@@ -1,17 +1,22 @@
-# 🎯 Internship Tracker & Watcher
+# 🎯 Internship Tracker & Watcher (PM · TPM · Project · Ops)
 
-An automated, high-frequency tracking engine for Software Engineering internships. It monitors both SimplifyJobs repository boards and direct company ATS portals (Greenhouse, Lever, Ashby) to send instantaneous, deduplicated email alerts when new roles open.
+An automated, high-frequency tracking engine for **Product Management (PM/APM)**, **Technical Program Management (TPM)**, **Project Management**, and **Operations (BizOps, TechOps, Strategy & Ops)** internships.
+
+It monitors both SimplifyJobs repository boards and direct company ATS portals (Greenhouse, Lever, Ashby) to send instantaneous, deduplicated email alerts when new roles open.
 
 ---
 
 ## ⚡ Features
 
 - **Dual-Engine Detection**:
-  - **SimplifyJobs Board Watcher**: Monitors curated Summer and Off-season internship tables via authenticated GitHub API.
+  - **SimplifyJobs Board Watcher**: Monitors curated Summer and Off-season internship tables via authenticated GitHub API across all relevant categories.
   - **Direct ATS Watcher**: Directly queries 100+ top company ATS endpoints (Ashby, Greenhouse, Lever) in parallel to detect job postings before aggregator boards catch them.
 - **Intelligent Filtering (`job_filters.py`)**:
-  - Filters for software engineering disciplines (Backend, Frontend, Full Stack, Systems, Infrastructure, DevOps, Platform, Cloud).
-  - Disqualifies non-SWE, hardware, IT, sales, and marketing roles.
+  - Targets Product Management (PM, APM, Product Strategy, Product Operations, Product Analyst).
+  - Targets Technical Program Management (TPM, Program Management).
+  - Targets Project Management (Project Manager, Project Coordinator, Project Lead).
+  - Targets Operations (Business Operations, BizOps, TechOps, Strategy & Operations, Operations Analyst).
+  - Disqualifies pure software engineering, hardware engineering, data science, sales, and non-relevant roles.
   - Retains US-based and US-remote eligible roles.
 - **Smart Deduplication**:
   - Maintains state snapshots (`snapshots/`) across runs so you are never emailed about the same role twice, even if reposted under new IDs or across multiple boards.

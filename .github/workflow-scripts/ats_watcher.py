@@ -1,6 +1,5 @@
-"""Poll company ATS boards (Greenhouse / Lever / Ashby) for new US software
-engineering intern roles (general SWE, full-stack, frontend, backend,
-infra/platform, product engineering) and emit an email via GITHUB_OUTPUT,
+"""Poll company ATS boards (Greenhouse / Lever / Ashby) for new US Product Management,
+TPM, Project Management, and Operations intern roles and emit an email via GITHUB_OUTPUT,
 mirroring parse_boards.py.
 
 Postings hit the ATS before LinkedIn or the SimplifyJobs boards pick them
@@ -150,10 +149,10 @@ def render_html(items: list) -> str:
         '<div style="max-width:640px;margin:0 auto;background:#fff;padding:24px;'
         'border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.08);">'
         f'<h1 style="font-size:18px;margin:0 0 4px;color:#111;">'
-        f'{len(items)} new SWE intern role{"s" if len(items) != 1 else ""}</h1>'
+        f'{len(items)} new PM / TPM / Project / Ops intern role{"s" if len(items) != 1 else ""}</h1>'
         '<p style="font-size:12px;color:#888;margin:0 0 8px;">'
-        'US software engineering internships — straight from company ATS '
-        'boards (Greenhouse / Lever / Ashby), usually before LinkedIn.</p>'
+        'US Product Management, TPM, Project Management, and Operations internships — '
+        'straight from company ATS boards (Greenhouse / Lever / Ashby), usually before LinkedIn.</p>'
         '<table cellpadding="0" cellspacing="0" border="0" '
         'style="width:100%;border-collapse:collapse;">'
         + "\n".join(rows) +
@@ -168,7 +167,7 @@ def render_html(items: list) -> str:
 
 
 def render_plain(items: list) -> str:
-    lines = [f"{len(items)} new SWE intern role(s)", ""]
+    lines = [f"{len(items)} new PM / TPM / Project / Ops intern role(s)", ""]
     for it in items:
         lines.append(f"  {it['company']} - {it['title']}")
         lines.append(f"    Location: {it['location'] or '(not listed)'}")
@@ -183,7 +182,7 @@ def build_subject(items: list) -> str:
     preview = ", ".join(unique[:3])
     suffix = f" +{len(unique) - 3} more" if len(unique) > 3 else ""
     plural = "s" if len(items) != 1 else ""
-    return f"{len(items)} new SWE intern role{plural} (ATS): {preview}{suffix}"
+    return f"{len(items)} new PM/TPM/Ops intern role{plural} (ATS): {preview}{suffix}"
 
 
 def main():
