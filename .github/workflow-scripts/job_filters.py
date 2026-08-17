@@ -92,8 +92,20 @@ NON_US_RE = re.compile(
 )
 
 
+FULLTIME_EXCLUDE_RE = re.compile(
+    r"\bsenior\b|\bsr\.?\b|\bstaff\b|\bprincipal\b|\bdirector\b|\bvp\b|\bhead of\b|\bvice president\b",
+    re.I,
+)
+
+
 def wanted_title(title: str) -> bool:
     """True for an in-profile PM, TPM, Project Management, or Operations internship."""
+    # MUST contain an internship/co-op/student keyword
+    if not INTERN_RE.search(title):
+        return False
+    # Exclude senior full-time indicators
+    if FULLTIME_EXCLUDE_RE.search(title):
+        return False
     # PM, TPM, and Project Management roles are always matched
     if PM_TPM_PROJECT_RE.search(title):
         return True
