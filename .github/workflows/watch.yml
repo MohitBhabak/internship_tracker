@@ -24,21 +24,48 @@ jobs:
       - name: Checkout this repo
         uses: actions/checkout@v4
 
-      # Fetched in parallel: the off-season board is ~1 MB and dominates the
-      # wall time, so overlapping the two saves most of the smaller fetch.
+      # Fetched through the authenticated contents API, not raw.githubusercontent.
+      # Anonymous raw is rate limited per source IP, and Actions runners share
+      # IPs across customers, so this returned 429 unpredictably. Authenticated
+      # requests get 5000/hr instead.
+      #
+      # -f matters as much as the auth: without it curl writes the 429 body into
+      # the snapshot, exits 0, and the parser reads a board with zero rows —
+      # identical to "no new listings". Rate-limited polls were being skipped
+      # silently. Fail loudly here instead; the ATS half still runs, and the
+      # snapshot copy is guarded on this step succeeding.
+      #
+      # Fetched in parallel: the off-season board is ~1 MB and dominates.
       - name: Fetch latest versions of both Simplify boards
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p snapshots
-          base=https://raw.githubusercontent.com/SimplifyJobs/Summer2026-Internships/dev
-          curl -sSf --retry 3 --retry-delay 2 --max-time 30 \
-            "$base/README.md" -o current-main.md &
+          # Pinned to the 2027 repo by name. The old Summer2026 URL still works
+          # only because GitHub redirects renamed repos, so the watcher had
+          # quietly rolled over to the 2027 board without the config saying so.
+          # -L stays as a safety net for the next season's rename.
+          api=https://api.github.com/repos/SimplifyJobs/Summer2027-Internships/contents
+          fetch() {
+            curl -sSfL --retry 5 --retry-delay 3 --retry-all-errors --max-time 40 \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Accept: application/vnd.github.raw" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "$api/$1?ref=dev" -o "$2"
+          }
+          fetch README.md current-main.md &
           pid_main=$!
-          curl -sSf --retry 3 --retry-delay 2 --max-time 30 \
-            "$base/README-Off-Season.md" -o current-offseason.md &
+          fetch README-Off-Season.md current-offseason.md &
           pid_off=$!
           wait $pid_main || { echo "main board fetch failed"; exit 1; }
           wait $pid_off  || { echo "off-season board fetch failed"; exit 1; }
           wc -c current-main.md current-offseason.md
+          # A truncated or error response can still be valid-ish text; require
+          # the files to be plausibly board-sized before trusting them.
+          for f in current-main.md current-offseason.md; do
+            size=$(wc -c < "$f")
+            [ "$size" -gt 50000 ] || { echo "$f is only ${size}B — refusing to parse"; exit 1; }
+          done
 
       - name: Parse Simplify boards and build email
         id: simplify
