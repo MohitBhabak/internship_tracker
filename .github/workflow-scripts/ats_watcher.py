@@ -18,6 +18,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from job_filters import is_us, wanted_title
+from notifier import send_email
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 COMPANIES_PATH = SCRIPT_DIR / "ats_companies.json"
@@ -228,23 +229,10 @@ def main():
     html_body = render_html(new)
     plain_body = render_plain(new)
 
-    output_path = os.environ.get("GITHUB_OUTPUT")
-    if not output_path:
-        print("---SUBJECT---")
-        print(subject)
-        print("---PLAIN---")
-        print(plain_body)
-        return
-
-    with open(output_path, "a", encoding="utf-8") as f:
-        f.write(f"total={total}\n")
-        f.write(f"subject={subject}\n")
-        f.write("html_body<<HTMLEOF\n")
-        f.write(html_body)
-        f.write("\nHTMLEOF\n")
-        f.write("plain_body<<PLAINEOF\n")
-        f.write(plain_body)
-        f.write("\nPLAINEOF\n")
+    if total > 0:
+        send_email(subject, html_body, plain_body, from_name="Internship Watcher (ATS)")
+    else:
+        print("No new ATS postings; skipping email.")
 
 
 if __name__ == "__main__":

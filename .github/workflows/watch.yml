@@ -67,44 +67,24 @@ jobs:
             [ "$size" -gt 50000 ] || { echo "$f is only ${size}B — refusing to parse"; exit 1; }
           done
 
-      - name: Parse Simplify boards and build email
+      - name: Parse Simplify boards and send alerts
         id: simplify
+        env:
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
         run: python3 .github/workflow-scripts/parse_boards.py
-
-      - name: Send Simplify email if new rows found
-        if: steps.simplify.outputs.total != '0'
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          subject: ${{ steps.simplify.outputs.subject }}
-          to: ${{ secrets.MAIL_TO }}
-          from: Internship Watcher
-          html_body: ${{ steps.simplify.outputs.html_body }}
-          body: ${{ steps.simplify.outputs.plain_body }}
 
       # Runs even if the Simplify half failed — the two sources are independent,
       # and a bad fetch upstream shouldn't cost us the ATS poll.
-      - name: Poll ATS boards and build email
+      - name: Poll ATS boards and send alerts
         id: ats
         if: ${{ !cancelled() }}
+        env:
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
         run: python3 .github/workflow-scripts/ats_watcher.py
-
-      - name: Send ATS email if new roles found
-        if: ${{ !cancelled() && steps.ats.outputs.total != '' && steps.ats.outputs.total != '0' }}
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          subject: ${{ steps.ats.outputs.subject }}
-          to: ${{ secrets.MAIL_TO }}
-          from: Internship Watcher (ATS)
-          html_body: ${{ steps.ats.outputs.html_body }}
-          body: ${{ steps.ats.outputs.plain_body }}
 
       - name: Save Simplify snapshots for next run
         if: ${{ !cancelled() && steps.simplify.outcome == 'success' }}
