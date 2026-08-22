@@ -86,21 +86,30 @@ jobs:
           MAIL_TO: ${{ secrets.MAIL_TO }}
         run: python3 .github/workflow-scripts/ats_watcher.py
 
+      - name: Poll LinkedIn boards and send alerts
+        id: linkedin
+        if: ${{ !cancelled() }}
+        env:
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: python3 .github/workflow-scripts/linkedin_watcher.py
+
       - name: Save Simplify snapshots for next run
         if: ${{ !cancelled() && steps.simplify.outcome == 'success' }}
         run: |
           cp current-main.md snapshots/previous-main.md
           cp current-offseason.md snapshots/previous-offseason.md
 
-      # One workflow owning all four state files means one commit and one push,
-      # so the two watchers can no longer collide on rebase.
+      # One workflow owning all state files means one commit and one push,
+      # so the watchers can no longer collide on rebase.
       - name: Commit updated state
         if: ${{ !cancelled() }}
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add snapshots/previous-main.md snapshots/previous-offseason.md \
-                  snapshots/seen.json snapshots/ats-seen.json
+                  snapshots/seen.json snapshots/ats-seen.json snapshots/linkedin-seen.json
           git diff --staged --quiet && exit 0
           git commit -m "Update watcher state"
           for attempt in 1 2 3; do
