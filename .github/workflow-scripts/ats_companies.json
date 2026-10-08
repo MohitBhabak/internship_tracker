@@ -136,6 +136,11 @@
  },
  {
   "ats": "greenhouse",
+  "slug": "benevity",
+  "name": "Benevity"
+ },
+ {
+  "ats": "greenhouse",
   "slug": "betterment",
   "name": "Betterment"
  },
@@ -148,6 +153,11 @@
   "ats": "greenhouse",
   "slug": "bitwarden",
   "name": "Bitwarden"
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "boostedai",
+  "name": "Boosted.ai"
  },
  {
   "ats": "greenhouse",
@@ -243,6 +253,11 @@
   "ats": "ashby",
   "slug": "cognition",
   "name": "Cognition"
+ },
+ {
+  "ats": "ashby",
+  "slug": "cohere",
+  "name": "Cohere"
  },
  {
   "ats": "greenhouse",
@@ -410,6 +425,11 @@
   "name": "Flexport"
  },
  {
+  "ats": "ashby",
+  "slug": "float",
+  "name": "Float"
+ },
+ {
   "ats": "greenhouse",
   "slug": "gemini",
   "name": "Gemini"
@@ -463,6 +483,11 @@
   "ats": "greenhouse",
   "slug": "honeycomb",
   "name": "Honeycomb"
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "hootsuite",
+  "name": "Hootsuite"
  },
  {
   "ats": "greenhouse",
@@ -540,9 +565,19 @@
   "name": "LaunchDarkly"
  },
  {
+  "ats": "lever",
+  "slug": "league",
+  "name": "League"
+ },
+ {
   "ats": "greenhouse",
   "slug": "liftoff",
   "name": "Liftoff"
+ },
+ {
+  "ats": "greenhouse",
+  "slug": "lightspeedhq",
+  "name": "Lightspeed"
  },
  {
   "ats": "ashby",
@@ -1078,6 +1113,11 @@
   "ats": "lever",
   "slug": "wealthfront",
   "name": "Wealthfront"
+ },
+ {
+  "ats": "ashby",
+  "slug": "wealthsimple",
+  "name": "Wealthsimple"
  },
  {
   "ats": "greenhouse",
