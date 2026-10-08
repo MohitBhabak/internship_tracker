@@ -1,4 +1,4 @@
-"""Poll LinkedIn public guest job search API for new US Product Management,
+"""Poll LinkedIn public guest job search API for new US / Canada Product Management,
 TPM, Project Management, and Operations intern roles and emit an email alert via SMTP.
 
 Postings on LinkedIn guest search API are public, real-time, and require zero authentication.
@@ -15,7 +15,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-from job_filters import is_us, wanted_title
+from job_filters import is_us_or_canada, wanted_title
 from notifier import send_email
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -41,6 +41,12 @@ SEARCH_QUERIES = [
     "Business Operations Intern",
 ]
 
+# Each query runs once per location; LinkedIn's guest search takes one location.
+SEARCH_LOCATIONS = [
+    "United States",
+    "Canada",
+]
+
 
 def clean_text(raw: str) -> str:
     s = TAG_RE.sub("", raw)
@@ -48,12 +54,13 @@ def clean_text(raw: str) -> str:
     return WHITESPACE_RE.sub(" ", s).strip()
 
 
-def search_linkedin_query(query: str) -> list:
-    """Fetch recent US job postings for a single search query on LinkedIn."""
+def search_linkedin_query(query: str, location: str) -> list:
+    """Fetch recent job postings for one search query in one location on LinkedIn."""
     # f_TPR=r86400 restricts search to roles posted within the last 24 hours
     url = (
         "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?"
-        f"keywords={urllib.parse.quote(query)}&location=United+States&f_TPR=r86400&start=0"
+        f"keywords={urllib.parse.quote(query)}&location={urllib.parse.quote_plus(location)}"
+        "&f_TPR=r86400&start=0"
     )
     jobs = []
     try:
@@ -93,7 +100,7 @@ def search_linkedin_query(query: str) -> list:
                     m_id = re.search(r"-(\d{8,12})(?:\Z|/|\?)", clean_link)
                     job_id = f"li:{m_id.group(1)}" if m_id else f"li:{clean_link}"
 
-                    if wanted_title(title) and is_us(location):
+                    if wanted_title(title) and is_us_or_canada(location):
                         jobs.append(
                             {
                                 "id": job_id,
@@ -104,14 +111,18 @@ def search_linkedin_query(query: str) -> list:
                             }
                         )
     except Exception as e:
-        print(f"WARN: LinkedIn search query {query!r} failed: {e}", file=sys.stderr)
+        print(f"WARN: LinkedIn search query {query!r} in {location} failed: {e}", file=sys.stderr)
     return jobs
 
 
 def collect_matches() -> list:
     all_jobs = []
     with ThreadPoolExecutor(max_workers=6) as pool:
-        futures = {pool.submit(search_linkedin_query, q): q for q in SEARCH_QUERIES}
+        futures = {
+            pool.submit(search_linkedin_query, q, loc): (q, loc)
+            for q in SEARCH_QUERIES
+            for loc in SEARCH_LOCATIONS
+        }
         for fut in as_completed(futures):
             all_jobs.extend(fut.result())
 
@@ -161,7 +172,7 @@ def render_html(items: list) -> str:
         f'<h1 style="font-size:18px;margin:0 0 4px;color:#111;">'
         f'{len(items)} new PM / TPM / Project / Ops intern role{"s" if len(items) != 1 else ""} on LinkedIn</h1>'
         '<p style="font-size:12px;color:#888;margin:0 0 8px;">'
-        'US Product Management, TPM, Project Management, and Operations internships — '
+        'US &amp; Canada Product Management, TPM, Project Management, and Operations internships — '
         'sourced directly from LinkedIn guest job search.</p>'
         '<table cellpadding="0" cellspacing="0" border="0" '
         'style="width:100%;border-collapse:collapse;">'

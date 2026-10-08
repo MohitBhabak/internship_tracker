@@ -1,4 +1,4 @@
-"""Poll company ATS boards (Greenhouse / Lever / Ashby) for new US Product Management,
+"""Poll company ATS boards (Greenhouse / Lever / Ashby) for new US / Canada Product Management,
 TPM, Project Management, and Operations intern roles and emit an email via GITHUB_OUTPUT,
 mirroring parse_boards.py.
 
@@ -17,7 +17,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-from job_filters import is_us, wanted_title
+from job_filters import is_us_or_canada, wanted_title
 from notifier import send_email
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -107,7 +107,7 @@ def collect_matches() -> tuple:
                 print(f"WARN: {c['ats']}:{c['slug']} failed: {e}", file=sys.stderr)
                 continue
             for j in jobs:
-                if wanted_title(j["title"]) and is_us(j["location"]):
+                if wanted_title(j["title"]) and is_us_or_canada(j["location"]):
                     j["company"] = c["name"]
                     matches.append(j)
     matches.sort(key=lambda j: (j["company"].lower(), j["title"].lower()))
@@ -152,7 +152,7 @@ def render_html(items: list) -> str:
         f'<h1 style="font-size:18px;margin:0 0 4px;color:#111;">'
         f'{len(items)} new PM / TPM / Project / Ops intern role{"s" if len(items) != 1 else ""}</h1>'
         '<p style="font-size:12px;color:#888;margin:0 0 8px;">'
-        'US Product Management, TPM, Project Management, and Operations internships — '
+        'US &amp; Canada Product Management, TPM, Project Management, and Operations internships — '
         'straight from company ATS boards (Greenhouse / Lever / Ashby), usually before LinkedIn.</p>'
         '<table cellpadding="0" cellspacing="0" border="0" '
         'style="width:100%;border-collapse:collapse;">'

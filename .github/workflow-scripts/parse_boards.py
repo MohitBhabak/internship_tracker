@@ -5,7 +5,7 @@ import re
 import sys
 from pathlib import Path
 
-from job_filters import is_us, wanted_title
+from job_filters import is_us_or_canada, wanted_title
 from notifier import send_email
 
 TR_RE = re.compile(r"<tr>(.*?)</tr>", re.DOTALL)
@@ -69,7 +69,7 @@ def parse_rows(path: str) -> dict:
         location = strip_html(tds[2])
         if not wanted_title(role):
             continue
-        if not is_us(location):
+        if not is_us_or_canada(location):
             continue
         # The apply cell is tds[3] on the main board but tds[4] on the
         # off-season board (extra "Terms" column), so search the whole row.
@@ -200,7 +200,7 @@ def render_html(new_main: list, new_off: list) -> str:
         f'<h1 style="font-size:18px;margin:0 0 4px;color:#111;">'
         f'{total} new PM / TPM / Project / Ops internship{"s" if total != 1 else ""}</h1>'
         '<p style="font-size:12px;color:#888;margin:0 0 8px;">'
-        'US Product Management, TPM, Project Management, and Operations roles on SimplifyJobs boards.</p>'
+        'US &amp; Canada Product Management, TPM, Project Management, and Operations roles on SimplifyJobs boards.</p>'
         f'{section("Main Board", new_main)}'
         f'{section("Off-Season Board", new_off)}'
         '<hr style="border:0;border-top:1px solid #eee;margin:20px 0 8px;">'

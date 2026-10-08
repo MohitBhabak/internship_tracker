@@ -68,9 +68,19 @@ US_HINT_RE = re.compile(
     re.I,
 )
 
+CANADA_HINT_RE = re.compile(
+    r"canada|\bcan\b|ontario|quebec|qu[eé]bec|british columbia|alberta|"
+    r"manitoba|saskatchewan|nova scotia|new brunswick|newfoundland|"
+    r"prince edward island|yukon|northwest territories|nunavut|"
+    r"toronto|vancouver|montr[eé]al|calgary|ottawa|waterloo|kitchener|"
+    r"edmonton|winnipeg|halifax|mississauga|markham|burnaby|gatineau|"
+    r"hamilton,\s?on|london,\s?on|victoria,\s?bc|regina|saskatoon|"
+    r",\s?(?-i:ON|QC|BC|AB|MB|SK|NS|NB|NL|PE|YT|NT|NU)\b",
+    re.I,
+)
+
 NON_US_RE = re.compile(
-    r"canada|ontario|toronto|vancouver|montr[eé]al|quebec|calgary|ottawa|"
-    r"waterloo|british columbia|united kingdom|\buk\b|london|ireland|"
+    r"united kingdom|\buk\b|london|ireland|"
     r"dublin|germany|berlin|munich|france|paris|netherlands|amsterdam|"
     r"belgium|spain|madrid|barcelona|portugal|lisbon|italy|milan|"
     r"switzerland|zurich|geneva|austria|vienna|poland|warsaw|krakow|"
@@ -86,8 +96,7 @@ NON_US_RE = re.compile(
     r"colombia|bogot|chile|santiago|nigeria|lagos|egypt|cairo|kenya|"
     r"nairobi|south africa|turkey|istanbul|ukraine|kyiv|serbia|belgrade|"
     r"bulgaria|sofia|croatia|zagreb|lithuania|vilnius|latvia|riga|"
-    r"armenia|yerevan|cyprus|malta|luxembourg|emea|apac|latam|"
-    r",\s?(?-i:ON|QC|BC|AB|MB|SK|NS|NB|NL|PE|YT)\b",
+    r"armenia|yerevan|cyprus|malta|luxembourg|emea|apac|latam",
     re.I,
 )
 
@@ -118,16 +127,16 @@ def wanted_title(title: str) -> bool:
     return False
 
 
-def is_us(location: str) -> bool:
-    """US hint wins, then a clearly-foreign hint loses; ambiguous strings
-    (bare "Remote", city-only names) are kept rather than dropped.
+def is_us_or_canada(location: str) -> bool:
+    """A US or Canada hint wins, then a clearly-foreign hint loses; ambiguous
+    strings (bare "Remote", city-only names) are kept rather than dropped.
 
-    Multi-location rows ("Toronto, ON · New York, NY") keep on the US hit,
-    so a role that is US-available anywhere still gets through.
+    Multi-location rows ("London, UK · Toronto, ON") keep on the US/Canada
+    hit, so a role that is available in either country anywhere gets through.
     """
     if not location:
         return True
-    if US_HINT_RE.search(location):
+    if US_HINT_RE.search(location) or CANADA_HINT_RE.search(location):
         return True
     if NON_US_RE.search(location):
         return False
