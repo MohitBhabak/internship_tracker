@@ -394,5 +394,17 @@
     "country": "United States",
     "first_seen": "2026-11-07T00:51:02+00:00",
     "last_seen": "2026-11-07T00:51:02+00:00"
+  },
+  {
+    "id": "wd:globalfoundries.wd1.myworkdayjobs.com:job/SGP---Woodlands/XMLNAME-2H-University-Intern---IP-Program-Management---QA_JR-2502782",
+    "company": "Globalfoundries",
+    "title": "2H University Intern - IP Program Management & QA",
+    "location": "SGP - Woodlands",
+    "url": "https://globalfoundries.wd1.myworkdayjobs.com/en-US/External/job/SGP---Woodlands/XMLNAME-2H-University-Intern---IP-Program-Management---QA_JR-2502782",
+    "source": "Workday",
+    "category": "Other",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-10-25T18:11:02.496600+00:00",
+    "last_seen": "2026-11-08T18:11:02.496579+00:00"
   }
 ]
