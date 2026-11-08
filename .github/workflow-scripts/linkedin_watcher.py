@@ -100,6 +100,9 @@ def search_linkedin_query(query: str, location: str) -> list:
                     m_id = re.search(r"-(\d{8,12})(?:\Z|/|\?)", clean_link)
                     job_id = f"li:{m_id.group(1)}" if m_id else f"li:{clean_link}"
 
+                    m_time = re.search(r"<time[^>]*datetime=\"([^\"]+)\"", c)
+                    posted_at = m_time.group(1) if m_time else ""
+
                     if wanted_title(title) and is_us_or_canada(location):
                         jobs.append(
                             {
@@ -108,6 +111,7 @@ def search_linkedin_query(query: str, location: str) -> list:
                                 "title": title,
                                 "location": location,
                                 "url": clean_link,
+                                "posted_at": posted_at,
                             }
                         )
     except Exception as e:

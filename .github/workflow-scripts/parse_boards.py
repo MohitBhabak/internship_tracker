@@ -67,6 +67,7 @@ def parse_rows(path: str) -> dict:
             continue
         role = strip_html(tds[1])
         location = strip_html(tds[2])
+        age = strip_html(tds[-1]) if len(tds) >= 4 else ""
         if not wanted_title(role):
             continue
         if not is_us_or_canada(location):
@@ -83,6 +84,7 @@ def parse_rows(path: str) -> dict:
             "role": role,
             "location": location,
             "apply_url": apply_url,
+            "age": age,
         }
     return rows
 

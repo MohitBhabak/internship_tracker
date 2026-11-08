@@ -195,6 +195,16 @@ export default function Dashboard() {
     return jobs.filter((j) => new Date(j.first_seen).getTime() >= cutoff).length;
   }, [jobs]);
 
+  const past3dCount = useMemo(() => {
+    const cutoff = Date.now() - 3 * 24 * 60 * 60 * 1000;
+    return jobs.filter((j) => new Date(j.first_seen).getTime() >= cutoff).length;
+  }, [jobs]);
+
+  const past7dCount = useMemo(() => {
+    const cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
+    return jobs.filter((j) => new Date(j.first_seen).getTime() >= cutoff).length;
+  }, [jobs]);
+
   const uniqueCompaniesCount = useMemo(() => {
     return new Set(jobs.map((j) => j.company.toLowerCase())).size;
   }, [jobs]);
@@ -359,23 +369,29 @@ export default function Dashboard() {
               </button>
               <button
                 onClick={() => setTimeFilter('3d')}
-                className={`px-3 py-1.5 rounded-lg transition-all ${
+                className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 ${
                   timeFilter === '3d'
                     ? 'bg-blue-600 text-white shadow-sm font-semibold'
                     : 'text-slate-400 hover:text-slate-200'
                 }`}
               >
                 Past 3 Days
+                <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-slate-800 text-slate-300">
+                  {past3dCount}
+                </span>
               </button>
               <button
                 onClick={() => setTimeFilter('7d')}
-                className={`px-3 py-1.5 rounded-lg transition-all ${
+                className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 ${
                   timeFilter === '7d'
                     ? 'bg-blue-600 text-white shadow-sm font-semibold'
                     : 'text-slate-400 hover:text-slate-200'
                 }`}
               >
                 Past 7 Days
+                <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-slate-800 text-slate-300">
+                  {past7dCount}
+                </span>
               </button>
               <button
                 onClick={() => setTimeFilter('all')}
@@ -481,14 +497,19 @@ export default function Dashboard() {
         </div>
 
         {/* Results Header Count */}
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+          <div className="flex items-center gap-2 flex-wrap">
             <h2 className="text-sm font-semibold text-slate-300">
               Showing <span className="text-white font-bold">{filteredJobs.length}</span> postings
             </h2>
             {timeFilter === '24h' && (
-              <span className="text-xs text-amber-400 font-medium bg-amber-400/10 px-2 py-0.5 rounded-full border border-amber-400/20">
+              <span className="text-xs text-amber-400 font-medium bg-amber-400/10 px-2.5 py-0.5 rounded-full border border-amber-400/20">
                 Found in Past 24 Hours
+              </span>
+            )}
+            {timeFilter === '24h' && (
+              <span className="text-xs text-slate-400">
+                (Note: Companies post fewer roles on weekends — switch to &quot;Past 3 Days&quot; or &quot;All Active&quot; to browse more listings)
               </span>
             )}
           </div>
@@ -501,7 +522,7 @@ export default function Dashboard() {
                 setSourceFilter('all');
                 setStatusFilter('all');
               }}
-              className="text-xs text-blue-400 hover:text-blue-300 transition-colors"
+              className="text-xs text-blue-400 hover:text-blue-300 transition-colors self-start sm:self-auto"
             >
               Reset Filters
             </button>

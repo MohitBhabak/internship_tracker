@@ -68,6 +68,7 @@ def fetch_workday_company(company: dict) -> list:
 
                     title = posting.get("title", "").strip()
                     location = posting.get("locationsText", "").strip()
+                    posted_on = posting.get("postedOn", "").strip()
                     clean_url = f"https://{domain}/en-US/{site}{ext_path}"
 
                     # Unique persistent ID for Workday postings
@@ -81,6 +82,7 @@ def fetch_workday_company(company: dict) -> list:
                                 "title": title,
                                 "location": location,
                                 "url": clean_url,
+                                "posted_on": posted_on,
                             }
                         )
         except Exception as e:
