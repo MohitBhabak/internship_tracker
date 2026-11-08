@@ -189,12 +189,6 @@ def build_subject(items: list) -> str:
 def main():
     matches = collect_matches()
 
-    try:
-        from job_store import record_jobs
-        record_jobs(matches, "Workday")
-    except Exception as e:
-        print(f"WARN: Failed to record Workday jobs to dashboard feed: {e}", file=sys.stderr)
-
     first_run = not SEEN_PATH.exists()
     seen = set()
     if not first_run:
@@ -229,7 +223,14 @@ def main():
     plain_body = render_plain(new)
 
     if total > 0:
-        send_email(subject, html_body, plain_body, from_name="Internship Watcher (Workday)")
+        send_email(
+            subject,
+            html_body,
+            plain_body,
+            from_name="Internship Watcher (Workday)",
+            items=new,
+            source="Workday",
+        )
     else:
         print("No new Workday postings; skipping email.")
 

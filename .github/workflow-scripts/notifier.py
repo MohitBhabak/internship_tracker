@@ -10,8 +10,18 @@ def send_email(
     html_body: str,
     plain_body: str,
     from_name: str = "Internship Watcher",
+    items: list = None,
+    source: str = None,
 ) -> bool:
-    """Send an HTML/plaintext email alert via Gmail SMTP SSL."""
+    """Send an HTML/plaintext email alert via Gmail SMTP SSL and record to dashboard feed."""
+    # 1. Funnel Integration: Always record the exact items emailed to the dashboard
+    if items and source:
+        try:
+            from job_store import record_emailed_jobs
+            record_emailed_jobs(items, source)
+        except Exception as e:
+            print(f"WARN: Failed to record emailed jobs to dashboard feed: {e}", file=sys.stderr)
+
     username = os.environ.get("MAIL_USERNAME")
     password = os.environ.get("MAIL_PASSWORD")
     to_email = os.environ.get("MAIL_TO")

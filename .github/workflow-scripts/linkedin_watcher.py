@@ -213,12 +213,6 @@ def build_subject(items: list) -> str:
 def main():
     matches = collect_matches()
 
-    try:
-        from job_store import record_jobs
-        record_jobs(matches, "LinkedIn")
-    except Exception as e:
-        print(f"WARN: Failed to record LinkedIn jobs to dashboard feed: {e}", file=sys.stderr)
-
     first_run = not SEEN_PATH.exists()
     seen = set()
     if not first_run:
@@ -250,7 +244,14 @@ def main():
     plain_body = render_plain(new)
 
     if total > 0:
-        send_email(subject, html_body, plain_body, from_name="Internship Watcher (LinkedIn)")
+        send_email(
+            subject,
+            html_body,
+            plain_body,
+            from_name="Internship Watcher (LinkedIn)",
+            items=new,
+            source="LinkedIn",
+        )
     else:
         print("No new LinkedIn postings; skipping email.")
 

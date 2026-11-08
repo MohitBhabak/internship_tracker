@@ -102,19 +102,20 @@ def record_jobs(items: list, source: str) -> int:
             if location and not existing.get("location"):
                 existing["location"] = location
         else:
-            first_seen = now_iso
+            first_seen = it.get("first_seen") or now_iso
             posted_at = it.get("posted_at")
             posted_on = it.get("posted_on") or it.get("age")
-            if posted_at:
-                try:
-                    if "T" not in posted_at:
-                        first_seen = f"{posted_at}T12:00:00+00:00"
-                    else:
-                        first_seen = posted_at
-                except Exception:
-                    first_seen = now_iso
-            elif posted_on:
-                first_seen = parse_relative_age_to_iso(posted_on)
+            if not it.get("first_seen"):
+                if posted_at:
+                    try:
+                        if "T" not in posted_at:
+                            first_seen = f"{posted_at}T12:00:00+00:00"
+                        else:
+                            first_seen = posted_at
+                    except Exception:
+                        first_seen = now_iso
+                elif posted_on:
+                    first_seen = parse_relative_age_to_iso(posted_on)
 
             existing_jobs[jid] = {
                 "id": jid,
@@ -145,3 +146,14 @@ def record_jobs(items: list, source: str) -> int:
         encoding="utf-8",
     )
     return added_count
+
+
+def record_emailed_jobs(items: list, source: str) -> int:
+    """Record listings that are dispatched in an email alert into the dashboard feed.
+
+    This ensures that the dashboard receives the exact same postings as the emails,
+    through the same funnel.
+    """
+    if not items:
+        return 0
+    return record_jobs(items, source)
