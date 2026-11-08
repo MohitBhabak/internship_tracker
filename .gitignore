@@ -2,3 +2,10 @@ __pycache__/
 current-main.md
 current-offseason.md
 .npm-cache/
+
+# Node & Next.js
+node_modules/
+.next/
+out/
+.env*.local
+

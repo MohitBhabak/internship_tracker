@@ -118,7 +118,8 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add snapshots/previous-main.md snapshots/previous-offseason.md \
-                  snapshots/seen.json snapshots/ats-seen.json snapshots/linkedin-seen.json snapshots/workday-seen.json
+                  snapshots/seen.json snapshots/ats-seen.json snapshots/linkedin-seen.json \
+                  snapshots/workday-seen.json data/jobs.json
           git diff --staged --quiet && exit 0
           git commit -m "Update watcher state"
           for attempt in 1 2 3; do

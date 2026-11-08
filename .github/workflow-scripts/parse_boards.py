@@ -265,6 +265,13 @@ def main():
         seen |= {display_id(row) for row in rows.values()}
     save_seen(seen)
 
+    try:
+        from job_store import record_jobs
+        items = [{"id": rid, **row} for rid, row in {**curr_main, **curr_off}.items()]
+        record_jobs(items, "Simplify")
+    except Exception as e:
+        print(f"WARN: Failed to record jobs to dashboard feed: {e}", file=sys.stderr)
+
     total = len(new_main) + len(new_off)
     print(f"Parsed: curr_main={len(curr_main)} curr_off={len(curr_off)} "
           f"seen={len(seen)} seen_file={'yes' if had_seen_file else 'seeded'}")

@@ -209,6 +209,12 @@ def build_subject(items: list) -> str:
 def main():
     matches = collect_matches()
 
+    try:
+        from job_store import record_jobs
+        record_jobs(matches, "LinkedIn")
+    except Exception as e:
+        print(f"WARN: Failed to record LinkedIn jobs to dashboard feed: {e}", file=sys.stderr)
+
     first_run = not SEEN_PATH.exists()
     seen = set()
     if not first_run:
