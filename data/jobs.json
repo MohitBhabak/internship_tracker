@@ -1,5 +1,17 @@
 [
   {
+    "id": "li:4487632497",
+    "company": "Xwire.ai",
+    "title": "Project Management Intern",
+    "location": "Menlo Park, CA",
+    "url": "https://www.linkedin.com/jobs/view/project-management-intern-at-xwire-ai-4487632497",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-08T12:00:00+00:00",
+    "last_seen": "2026-11-08T07:00:38.726041+00:00"
+  },
+  {
     "id": "li:4480813010",
     "company": "Northwestern Mutual",
     "title": "Underwriting Operations & Field Engagement Intern, Year round",
@@ -216,16 +228,16 @@
     "last_seen": "2026-11-07T05:10:37+00:00"
   },
   {
-    "id": "li:4488451053",
-    "company": "A Igreja de Jesus Cristo dos Santos dos Últimos Dias",
-    "title": "FamilySearch Operations Project Manager Intern, Full-Time",
-    "location": "Salt Lake City, UT",
-    "url": "https://www.linkedin.com/jobs/view/4488451053",
+    "id": "li:4488468410",
+    "company": "Pinterest",
+    "title": "Strategy & Operations Intern 2027 (USA)",
+    "location": "California, United States",
+    "url": "https://www.linkedin.com/jobs/view/4488468410",
     "source": "LinkedIn",
-    "category": "Project Management",
+    "category": "Operations",
     "country": "United States",
-    "first_seen": "2026-11-07T00:51:02+00:00",
-    "last_seen": "2026-11-07T00:51:02+00:00"
+    "first_seen": "2026-11-07T04:10:32+00:00",
+    "last_seen": "2026-11-07T04:10:32+00:00"
   },
   {
     "id": "p:b21b1dd0-f3e1-498f-b48e-8ca16e2503a8",
@@ -252,15 +264,15 @@
     "last_seen": "2026-11-07T02:40:19+00:00"
   },
   {
-    "id": "li:4488468410",
-    "company": "Pinterest",
-    "title": "Strategy & Operations Intern 2027 (USA)",
-    "location": "California, United States",
-    "url": "https://www.linkedin.com/jobs/view/4488468410",
+    "id": "li:4488451053",
+    "company": "A Igreja de Jesus Cristo dos Santos dos Últimos Dias",
+    "title": "FamilySearch Operations Project Manager Intern, Full-Time",
+    "location": "Salt Lake City, UT",
+    "url": "https://www.linkedin.com/jobs/view/4488451053",
     "source": "LinkedIn",
-    "category": "Operations",
+    "category": "Project Management",
     "country": "United States",
-    "first_seen": "2026-11-07T04:10:32+00:00",
-    "last_seen": "2026-11-07T04:10:32+00:00"
+    "first_seen": "2026-11-07T00:51:02+00:00",
+    "last_seen": "2026-11-07T00:51:02+00:00"
   }
 ]
