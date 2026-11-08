@@ -83,7 +83,13 @@ export default function Dashboard() {
 
   const fetchJobs = async () => {
     try {
-      const res = await fetch('/api/jobs');
+      const res = await fetch(`/api/jobs?t=${Date.now()}`, {
+        cache: 'no-store',
+        headers: {
+          'Pragma': 'no-cache',
+          'Cache-Control': 'no-cache',
+        },
+      });
       if (res.ok) {
         const data: JobsResponse = await res.json();
         setJobs(data.jobs || []);
@@ -141,7 +147,7 @@ export default function Dashboard() {
         // Time filter
         if (cutoff > 0) {
           const seenTime = new Date(j.first_seen).getTime();
-          if (seenTime < cutoff) return false;
+          if (isNaN(seenTime) || seenTime < cutoff) return false;
         }
 
         // Search text
@@ -192,17 +198,26 @@ export default function Dashboard() {
   // Metric counts
   const past24hCount = useMemo(() => {
     const cutoff = Date.now() - 24 * 60 * 60 * 1000;
-    return jobs.filter((j) => new Date(j.first_seen).getTime() >= cutoff).length;
+    return jobs.filter((j) => {
+      const t = new Date(j.first_seen).getTime();
+      return !isNaN(t) && t >= cutoff;
+    }).length;
   }, [jobs]);
 
   const past3dCount = useMemo(() => {
     const cutoff = Date.now() - 3 * 24 * 60 * 60 * 1000;
-    return jobs.filter((j) => new Date(j.first_seen).getTime() >= cutoff).length;
+    return jobs.filter((j) => {
+      const t = new Date(j.first_seen).getTime();
+      return !isNaN(t) && t >= cutoff;
+    }).length;
   }, [jobs]);
 
   const past7dCount = useMemo(() => {
     const cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
-    return jobs.filter((j) => new Date(j.first_seen).getTime() >= cutoff).length;
+    return jobs.filter((j) => {
+      const t = new Date(j.first_seen).getTime();
+      return !isNaN(t) && t >= cutoff;
+    }).length;
   }, [jobs]);
 
   const uniqueCompaniesCount = useMemo(() => {
@@ -271,7 +286,7 @@ export default function Dashboard() {
             </button>
             <div className="text-right hidden md:block">
               <span className="text-[11px] text-slate-500 block">
-                Last checked: {lastUpdated ? formatRelativeTime(lastUpdated) : 'just now'}
+                Last checked: {lastUpdated ? formatRelativeTime(lastUpdated) : 'just now'} · {sourceUsed === 'github-live' ? '⚡ Live' : 'Snapshot'}
               </span>
             </div>
           </div>
