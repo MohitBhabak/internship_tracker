@@ -1,5 +1,89 @@
 [
   {
+    "id": "g:airbnb:8108673",
+    "company": "Airbnb",
+    "title": "NextStay Fellow, Tech Ops & Programs",
+    "location": "United States",
+    "url": "https://careers.airbnb.com/positions/8108673?gh_jid=8108673",
+    "source": "ATS",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-08T22:20:30.801951+00:00",
+    "last_seen": "2026-11-08T22:20:30.801951+00:00"
+  },
+  {
+    "id": "a:etched:639fe410-56a4-44aa-ac93-8ee7c10c7d75",
+    "company": "Etched",
+    "title": "Growth Ops Intern",
+    "location": "San Jose",
+    "url": "https://jobs.ashbyhq.com/Etched/639fe410-56a4-44aa-ac93-8ee7c10c7d75",
+    "source": "ATS",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-08T22:20:30.801951+00:00",
+    "last_seen": "2026-11-08T22:20:30.801951+00:00"
+  },
+  {
+    "id": "simplify:fanduel:product co-op:toronto, on, canada",
+    "company": "FanDuel",
+    "title": "Product Co-op",
+    "location": "Toronto, ON, Canada",
+    "url": "https://boards.greenhouse.io/embed/job_app?token=8285180&utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "Canada",
+    "first_seen": "2026-11-08T22:20:10.507747+00:00",
+    "last_seen": "2026-11-08T22:20:10.507462+00:00"
+  },
+  {
+    "id": "li:4487655185",
+    "company": "Siemens",
+    "title": "Smart Infrastructure Electrical Products Engineering Leadership Development Program Internship",
+    "location": "Hingham, MA",
+    "url": "https://www.linkedin.com/jobs/view/smart-infrastructure-electrical-products-engineering-leadership-development-program-internship-at-siemens-4487655185",
+    "source": "LinkedIn",
+    "category": "Other",
+    "country": "United States",
+    "first_seen": "2026-11-08T12:00:00+00:00",
+    "last_seen": "2026-11-08T22:20:35.668495+00:00"
+  },
+  {
+    "id": "li:4487656108",
+    "company": "Siemens",
+    "title": "Smart Infrastructure Electrical Products Engineering Leadership Development Program Internship",
+    "location": "Peachtree Corners, GA",
+    "url": "https://www.linkedin.com/jobs/view/smart-infrastructure-electrical-products-engineering-leadership-development-program-internship-at-siemens-4487656108",
+    "source": "LinkedIn",
+    "category": "Other",
+    "country": "United States",
+    "first_seen": "2026-11-08T12:00:00+00:00",
+    "last_seen": "2026-11-08T22:20:35.668495+00:00"
+  },
+  {
+    "id": "li:4487649803",
+    "company": "Siemens",
+    "title": "Smart Infrastructure Electrical Products Engineering Leadership Development Program Internship",
+    "location": "Grand Prairie, TX",
+    "url": "https://www.linkedin.com/jobs/view/smart-infrastructure-electrical-products-engineering-leadership-development-program-internship-at-siemens-4487649803",
+    "source": "LinkedIn",
+    "category": "Other",
+    "country": "United States",
+    "first_seen": "2026-11-08T12:00:00+00:00",
+    "last_seen": "2026-11-08T22:20:35.668495+00:00"
+  },
+  {
+    "id": "li:4461665725",
+    "company": "TikTok",
+    "title": "TTS US Linehaul Solutions Project Intern (TikTok Shop - Supply Chain and Logistics) - 2026 Start",
+    "location": "New York, United States",
+    "url": "https://www.linkedin.com/jobs/view/tts-us-linehaul-solutions-project-intern-tiktok-shop-supply-chain-and-logistics-2026-start-at-tiktok-4461665725",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-08T12:00:00+00:00",
+    "last_seen": "2026-11-08T22:20:35.668495+00:00"
+  },
+  {
     "id": "li:4461984587",
     "company": "TikTok",
     "title": "Brand Operations Project Intern (TikTok Live) - 2026 Start",
@@ -408,6 +492,102 @@
     "last_seen": "2026-11-07T00:51:02+00:00"
   },
   {
+    "id": "wd:globalhr.wd5.myworkdayjobs.com:job/US-FL-MELBOURNE-308--1100-W-Hibiscus-Blvd--BLDG-308/Manufacturing-Engineering-Ops-Co-Op--Summer-Fall-2027-_01886462",
+    "company": "RTX Global HR",
+    "title": "Manufacturing Engineering Ops Co-Op (Summer/Fall 2027)",
+    "location": "US-FL-MELBOURNE-308 ~ 1100 W Hibiscus Blvd ~ BLDG 308",
+    "url": "https://globalhr.wd5.myworkdayjobs.com/en-US/rec_rtx_ext_gateway/job/US-FL-MELBOURNE-308--1100-W-Hibiscus-Blvd--BLDG-308/Manufacturing-Engineering-Ops-Co-Op--Summer-Fall-2027-_01886462",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-06T22:21:15.980808+00:00",
+    "last_seen": "2026-11-08T22:21:15.980429+00:00"
+  },
+  {
+    "id": "wd:globalhr.wd5.myworkdayjobs.com:job/US-FL-MELBOURNE-308--1100-W-Hibiscus-Blvd--BLDG-308/Manufacturing-Engineering-Ops-Co-Op--Spring-Summer-2027-_01886463",
+    "company": "RTX Global HR",
+    "title": "Manufacturing Engineering Ops Co-Op (Spring/Summer 2027)",
+    "location": "US-FL-MELBOURNE-308 ~ 1100 W Hibiscus Blvd ~ BLDG 308",
+    "url": "https://globalhr.wd5.myworkdayjobs.com/en-US/rec_rtx_ext_gateway/job/US-FL-MELBOURNE-308--1100-W-Hibiscus-Blvd--BLDG-308/Manufacturing-Engineering-Ops-Co-Op--Spring-Summer-2027-_01886463",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-06T22:21:15.980790+00:00",
+    "last_seen": "2026-11-08T22:21:15.980429+00:00"
+  },
+  {
+    "id": "wd:petronascanada.wd3.myworkdayjobs.com:job/Calgary/Summer-Student--Operation-Advancement_R0001881",
+    "company": "Petronascanada",
+    "title": "Summer Student, Operation Advancement",
+    "location": "Calgary",
+    "url": "https://petronascanada.wd3.myworkdayjobs.com/en-US/PETRONASCanada/job/Calgary/Summer-Student--Operation-Advancement_R0001881",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "Canada",
+    "first_seen": "2026-11-06T22:21:15.980759+00:00",
+    "last_seen": "2026-11-08T22:21:15.980429+00:00"
+  },
+  {
+    "id": "simplify:petronas canada:student intern - operation advancement:calgary, ab, canada",
+    "company": "PETRONAS Canada",
+    "title": "Student Intern - Operation Advancement",
+    "location": "Calgary, AB, Canada",
+    "url": "https://petronascanada.wd3.myworkdayjobs.com/PETRONASCanada/job/Calgary/Summer-Student--Operation-Advancement_R0001881?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Operations",
+    "country": "Canada",
+    "first_seen": "2026-11-06T22:20:10.507694+00:00",
+    "last_seen": "2026-11-08T22:20:10.507462+00:00"
+  },
+  {
+    "id": "wd:theirc.wd1.myworkdayjobs.com:job/Salt-Lake-City-UT-USA/Health-Program-Intern_JR00005853",
+    "company": "Theirc",
+    "title": "Health Program Intern",
+    "location": "Salt Lake City, UT USA",
+    "url": "https://theirc.wd1.myworkdayjobs.com/en-US/External_Careers/job/Salt-Lake-City-UT-USA/Health-Program-Intern_JR00005853",
+    "source": "Workday",
+    "category": "Other",
+    "country": "United States",
+    "first_seen": "2026-11-04T22:21:15.980825+00:00",
+    "last_seen": "2026-11-08T22:21:15.980429+00:00"
+  },
+  {
+    "id": "wd:mlse.wd3.myworkdayjobs.com:job/Toronto-Ontario/Digital-Operation-Intern_JR0000831-2",
+    "company": "Mlse",
+    "title": "Digital Operation Intern",
+    "location": "Toronto, Ontario",
+    "url": "https://mlse.wd3.myworkdayjobs.com/en-US/MLSE/job/Toronto-Ontario/Digital-Operation-Intern_JR0000831-2",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "Canada",
+    "first_seen": "2026-11-04T22:21:15.980748+00:00",
+    "last_seen": "2026-11-08T22:21:15.980429+00:00"
+  },
+  {
+    "id": "simplify:toshiba global commerce solutions:ai automation & revenue ops intern:durham, nc",
+    "company": "Toshiba Global Commerce Solutions",
+    "title": "AI Automation & Revenue Ops Intern",
+    "location": "Durham, NC",
+    "url": "https://job-boards.greenhouse.io/toshibaglobalcommercesolutions/jobs/5270466007?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-02T22:20:10.507733+00:00",
+    "last_seen": "2026-11-08T22:20:10.507462+00:00"
+  },
+  {
+    "id": "simplify:merck:future talent program co-op - patient data learning 🎓:cambridge, ma",
+    "company": "Merck",
+    "title": "Future Talent Program Co-op - Patient Data Learning 🎓",
+    "location": "Cambridge, MA",
+    "url": "https://msd.wd5.myworkdayjobs.com/searchjobs/job/USA---Massachusetts---Cambridge-320-Bent-Street/XMLNAME-2027-Future-Talent-Program---Patient-Data-Learning---Co-op_R424526?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Other",
+    "country": "United States",
+    "first_seen": "2026-11-02T22:20:10.507490+00:00",
+    "last_seen": "2026-11-08T22:20:10.507462+00:00"
+  },
+  {
     "id": "wd:zebra.wd501.myworkdayjobs.com:job/Lincolnshire-Illinois/XMLNAME-2027-Summer-Internship--US----Global-Marketing-Program-Management_JR103611",
     "company": "Zebra",
     "title": "2027 Summer Internship (US) - Global Marketing Program Management",
@@ -420,6 +600,30 @@
     "last_seen": "2026-11-08T18:31:08.094617+00:00"
   },
   {
+    "id": "wd:bristolmyerssquibb.wd5.myworkdayjobs.com:job/Princeton---NJ---US/Intern--Commercial-MBA-Leadership-Development-Program-Internship--Summer-2027-_R1605026-1",
+    "company": "Bristolmyerssquibb",
+    "title": "Intern, Commercial MBA Leadership Development Program Internship (Summer 2027)",
+    "location": "Princeton - NJ - US",
+    "url": "https://bristolmyerssquibb.wd5.myworkdayjobs.com/en-US/bms/job/Princeton---NJ---US/Intern--Commercial-MBA-Leadership-Development-Program-Internship--Summer-2027-_R1605026-1",
+    "source": "Workday",
+    "category": "Other",
+    "country": "United States",
+    "first_seen": "2026-10-25T22:21:15.980716+00:00",
+    "last_seen": "2026-11-08T22:21:15.980429+00:00"
+  },
+  {
+    "id": "wd:alliance.wd3.myworkdayjobs.com:job/Franklin-Tennessee---United-States-of-America/NMAC-Sales-Ops-Intern---Summer-2027---Franklin--TN_R00214222",
+    "company": "Alliance",
+    "title": "NMAC Sales Ops Intern - Summer 2027 - Franklin, TN",
+    "location": "Franklin, Tennessee - United States of America",
+    "url": "https://alliance.wd3.myworkdayjobs.com/en-US/nissanjobs/job/Franklin-Tennessee---United-States-of-America/NMAC-Sales-Ops-Intern---Summer-2027---Franklin--TN_R00214222",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-10-25T22:21:15.980454+00:00",
+    "last_seen": "2026-11-08T22:21:15.980429+00:00"
+  },
+  {
     "id": "wd:globalfoundries.wd1.myworkdayjobs.com:job/SGP---Woodlands/XMLNAME-2H-University-Intern---IP-Program-Management---QA_JR-2502782",
     "company": "Globalfoundries",
     "title": "2H University Intern - IP Program Management & QA",
@@ -430,5 +634,29 @@
     "country": "Remote / Flexible",
     "first_seen": "2026-10-25T18:11:02.496600+00:00",
     "last_seen": "2026-11-08T18:11:02.496579+00:00"
+  },
+  {
+    "id": "simplify:merck:future talent program intern - ai/ml biomedical imaging and computational pathology 🎓:cambridge, ma",
+    "company": "Merck",
+    "title": "Future Talent Program Intern - AI/ML Biomedical Imaging and Computational Pathology 🎓",
+    "location": "Cambridge, MA",
+    "url": "https://msd.wd5.myworkdayjobs.com/searchjobs/job/USA---Massachusetts---Cambridge-320-Bent-Street/XMLNAME-2027-Future-Talent-Program---AI-ML-Biomedical-Imaging-and-Computational-Pathology---Intern_R423515?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Other",
+    "country": "United States",
+    "first_seen": "2026-10-23T22:20:10.507709+00:00",
+    "last_seen": "2026-11-08T22:20:10.507462+00:00"
+  },
+  {
+    "id": "wd:rjet.wd108.myworkdayjobs.com:job/Carmel-Headquarters/Talent-Acquisition-Operations-Interns---Summer-2027_JR-007627",
+    "company": "Rjet",
+    "title": "Talent Acquisition Operations Interns - Summer 2027",
+    "location": "Carmel Headquarters",
+    "url": "https://rjet.wd108.myworkdayjobs.com/en-US/External_Career_Site/job/Carmel-Headquarters/Talent-Acquisition-Operations-Interns---Summer-2027_JR-007627",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-10-12T22:21:15.980768+00:00",
+    "last_seen": "2026-11-08T22:21:15.980429+00:00"
   }
 ]
