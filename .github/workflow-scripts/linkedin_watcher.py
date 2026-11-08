@@ -39,6 +39,9 @@ SEARCH_QUERIES = [
     "Project Management Intern",
     "Operations Intern",
     "Business Operations Intern",
+    "Product Management Co-op",
+    "Project Management Co-op",
+    "Operations Co-op",
 ]
 
 # Each query runs once per location; LinkedIn's guest search takes one location.

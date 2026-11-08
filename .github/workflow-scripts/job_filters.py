@@ -12,28 +12,38 @@ Pure Software Engineering, developer, hardware, and data science roles are exclu
 import re
 
 INTERN_RE = re.compile(
-    r"\bintern(ship)?\b|\bco[- ]?op\b|\bcoop\b|\bstudent\b|\bfellow(ship)?\b|\bapprentice(ship)?\b",
+    r"\bintern(?:s|ships?|ing)?\b|"
+    r"\bco[- ]?ops?\b|\bcoops?\b|\bco[- ]?operatives?\b|"
+    r"\bstudents?\b|\bundergrad(?:uate)?s?\b|\bpostgrad(?:uate)?s?\b|"
+    r"\btrainees?(?:hips?)?\b|\bapprentices?(?:hips?)?\b|\bfellows?(?:hips?)?\b|"
+    r"\bplacements?\b|\bindustrial placement\b|\bwork[- ]?study\b|"
+    r"\bpracticum\b|\bstagiaires?\b",
     re.I,
 )
 
 # PM, TPM, and Project Management roles
 PM_TPM_PROJECT_RE = re.compile(
     r"\bproduct manage|\bproduct manager\b|\bproduct management\b|\bapm\b|"
-    r"\bproduct intern\b|\bproduct ops\b|\bproduct operations\b|\bproduct strategy\b|\bproduct analyst\b|"
+    r"\bproduct\s+(?:intern(?:s|ships?|ing)?|co[- ]?ops?|coops?|students?|trainees?|fellows?|placements?)\b|"
+    r"\bproduct ops\b|\bproduct operations\b|\bproduct strategy\b|\bproduct analyst\b|"
     r"\btechnical program\b|\btpm\b|\bprogram manage|\bprogram manager\b|\bprogram management\b|"
+    r"\bprogram\s+(?:intern(?:s|ships?|ing)?|co[- ]?ops?|coops?|students?|trainees?|fellows?|placements?)\b|"
     r"\bproject manage|\bproject manager\b|\bproject management\b|\bproject coordinator\b|\bproject lead\b|"
-    r"\bproject analyst\b|\bproject specialist\b|\bprogram coordinator\b",
+    r"\bproject\s+(?:intern(?:s|ships?|ing)?|co[- ]?ops?|coops?|students?|trainees?|fellows?|placements?)\b|"
+    r"\bproject analyst\b|\bproject specialist\b|\bprogram coordinator\b|"
+    r"\bgestion de (?:projet|produit)\b",
     re.I,
 )
 
 # Operations roles
 OPERATIONS_RE = re.compile(
-    r"\boperations\b|\bbizops\b|\bbusiness operations\b|\btechops\b|\btechnical operations\b|"
-    r"\bstrategy & operations\b|\bstrategy and operations\b|\boperations analyst\b|\boperations intern\b|"
-    r"\bpeople operations\b|\bsales operations\b|\bmarketing operations\b|\brevenue operations\b|\brevops\b|"
-    r"\bsupply chain operations\b|\bclinical operations\b|\bfield operations\b|\boperations associate\b|"
-    r"\boperations specialist\b|\boperations coordinator\b|\boperations lead\b|\boperations management\b|"
-    r"\boperations program\b",
+    r"\bop[eé]rations?\b|\bbiz[- ]?ops\b|\bbusiness op[eé]rations?\b|\btech[- ]?ops\b|\btechnical op[eé]rations?\b|"
+    r"\bstrategy\s*(?:&|and)\s*op[eé]rations?\b|\bstrategy\s+ops\b|\bop[eé]rations?\s+analyst\b|"
+    r"\bop[eé]rations?\s+intern(?:s|ships?|ing)?\b|\bops\s+intern(?:s|ships?|ing)?\b|\bops\s+co[- ]?ops?\b|"
+    r"\b(?:people|sales|marketing|revenue|strategy|business|supply chain|field|clinical|commercial)\s+ops\b|"
+    r"\b(?:people|sales|marketing|revenue|supply chain|clinical|field|commercial)\s+op[eé]rations?\b|"
+    r"\brev[- ]?ops\b|\bop[eé]rations?\s+associate\b|\bop[eé]rations?\s+specialist\b|\bop[eé]rations?\s+coordinator\b|"
+    r"\bop[eé]rations?\s+lead\b|\bop[eé]rations?\s+management\b|\bop[eé]rations?\s+program\b",
     re.I,
 )
 

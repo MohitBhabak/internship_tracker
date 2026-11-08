@@ -40,7 +40,7 @@ def get_category(title: str) -> str:
     t = title.lower()
     if re.search(r"\btechnical program\b|\btpm\b", t):
         return "Technical Program Management (TPM)"
-    if re.search(r"\bproject (?:manage|coordinator|lead|analyst|specialist)", t):
+    if re.search(r"\bproject\b|\bprogram coordinator\b", t):
         return "Project Management"
     if re.search(r"\bproduct\b|\bapm\b", t):
         return "Product Management (PM)"
