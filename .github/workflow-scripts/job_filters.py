@@ -12,7 +12,7 @@ Pure Software Engineering, developer, hardware, and data science roles are exclu
 import re
 
 INTERN_RE = re.compile(
-    r"\bintern(ship)?\b|\bco[- ]?op\b|\bstudent\b|\bfellow(ship)?\b|\bapprentice(ship)?\b",
+    r"\bintern(ship)?\b|\bco[- ]?op\b|\bcoop\b|\bstudent\b|\bfellow(ship)?\b|\bapprentice(ship)?\b",
     re.I,
 )
 
@@ -102,7 +102,7 @@ NON_US_RE = re.compile(
 
 
 FULLTIME_EXCLUDE_RE = re.compile(
-    r"\bsenior\b|\bsr\.?\b|\bstaff\b|\bprincipal\b|\bdirector\b|\bvp\b|\bhead of\b|\bvice president\b",
+    r"\bsenior\b|\bsr\.?\b|\bstaff\b|\bprincipal\b|\bdirector\b|\bvp\b|\bhead of\b|\bvice president\b|\bchancellor\b|\bassociate vice\b",
     re.I,
 )
 
@@ -141,3 +141,7 @@ def is_us_or_canada(location: str) -> bool:
     if NON_US_RE.search(location):
         return False
     return True
+
+
+# Backward-compatibility alias
+is_us = is_us_or_canada

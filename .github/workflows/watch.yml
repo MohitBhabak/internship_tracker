@@ -95,6 +95,15 @@ jobs:
           MAIL_TO: ${{ secrets.MAIL_TO }}
         run: python3 .github/workflow-scripts/linkedin_watcher.py
 
+      - name: Poll Workday boards and send alerts
+        id: workday
+        if: ${{ !cancelled() }}
+        env:
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+        run: python3 .github/workflow-scripts/workday_watcher.py
+
       - name: Save Simplify snapshots for next run
         if: ${{ !cancelled() && steps.simplify.outcome == 'success' }}
         run: |
@@ -109,7 +118,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add snapshots/previous-main.md snapshots/previous-offseason.md \
-                  snapshots/seen.json snapshots/ats-seen.json snapshots/linkedin-seen.json
+                  snapshots/seen.json snapshots/ats-seen.json snapshots/linkedin-seen.json snapshots/workday-seen.json
           git diff --staged --quiet && exit 0
           git commit -m "Update watcher state"
           for attempt in 1 2 3; do
