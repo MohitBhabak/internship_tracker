@@ -1,5 +1,29 @@
 [
   {
+    "id": "wd:globalhr.wd5.myworkdayjobs.com:job/US-FL-MELBOURNE-310--1100-W-Hibiscus-Blvd--BLDG-310/Manufacturing-Engineering-Ops-Co-Op--Summer-Fall-2027-_01886465",
+    "company": "RTX Global HR",
+    "title": "Manufacturing Engineering Ops Co-Op (Summer/Fall 2027)",
+    "location": "US-FL-MELBOURNE-310 ~ 1100 W Hibiscus Blvd ~ BLDG 310",
+    "url": "https://globalhr.wd5.myworkdayjobs.com/en-US/rec_rtx_ext_gateway/job/US-FL-MELBOURNE-310--1100-W-Hibiscus-Blvd--BLDG-310/Manufacturing-Engineering-Ops-Co-Op--Summer-Fall-2027-_01886465",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-09T18:51:38.368849+00:00",
+    "last_seen": "2026-11-09T18:51:38.368653+00:00"
+  },
+  {
+    "id": "wd:globalhr.wd5.myworkdayjobs.com:job/US-FL-MELBOURNE-310--1100-W-Hibiscus-Blvd--BLDG-310/Manufacturing-Engineering-Ops-Co-Op--Spring-Summer-2027-_01886467",
+    "company": "RTX Global HR",
+    "title": "Manufacturing Engineering Ops Co-Op (Spring/Summer 2027)",
+    "location": "US-FL-MELBOURNE-310 ~ 1100 W Hibiscus Blvd ~ BLDG 310",
+    "url": "https://globalhr.wd5.myworkdayjobs.com/en-US/rec_rtx_ext_gateway/job/US-FL-MELBOURNE-310--1100-W-Hibiscus-Blvd--BLDG-310/Manufacturing-Engineering-Ops-Co-Op--Spring-Summer-2027-_01886467",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-09T18:51:38.368675+00:00",
+    "last_seen": "2026-11-09T18:51:38.368653+00:00"
+  },
+  {
     "id": "wd:vizient.wd1.myworkdayjobs.com:job/Chicago-IL-60607/XMLNAME-2027-Summer-Internship---HR-Strategy-and-Program-Management_35991R",
     "company": "Vizient",
     "title": "2027 Summer Internship - HR Strategy and Program Management",
@@ -70,6 +94,30 @@
     "country": "United States",
     "first_seen": "2026-11-09T14:41:19.802783+00:00",
     "last_seen": "2026-11-09T14:41:19.802759+00:00"
+  },
+  {
+    "id": "li:4487950427",
+    "company": "MacDonald-Miller Facility Solutions",
+    "title": "Intern - Inland Northwest Project Management",
+    "location": "Spokane, WA",
+    "url": "https://www.linkedin.com/jobs/view/intern-inland-northwest-project-management-at-macdonald-miller-facility-solutions-4487950427",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-09T12:00:00+00:00",
+    "last_seen": "2026-11-09T18:50:57.539353+00:00"
+  },
+  {
+    "id": "li:4487945588",
+    "company": "MacDonald-Miller Facility Solutions",
+    "title": "Intern - Inland Northwest Project Management",
+    "location": "Kennewick, WA",
+    "url": "https://www.linkedin.com/jobs/view/intern-inland-northwest-project-management-at-macdonald-miller-facility-solutions-4487945588",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-09T12:00:00+00:00",
+    "last_seen": "2026-11-09T18:50:57.539353+00:00"
   },
   {
     "id": "li:4489115489",
