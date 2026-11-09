@@ -1,5 +1,29 @@
 [
   {
+    "id": "simplify:badger meter:product management intern:milwaukee, wi",
+    "company": "Badger Meter",
+    "title": "Product Management Intern",
+    "location": "Milwaukee, WI",
+    "url": "https://badgermeter.wd5.myworkdayjobs.com/US_CareerSite/job/US---WI---Milwaukee-HQ/Product-Management-Intern_4676?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-09T15:40:11.673264+00:00",
+    "last_seen": "2026-11-09T15:40:11.673074+00:00"
+  },
+  {
+    "id": "simplify:cibc:associate technology leadership advancement program intern 🎓:toronto, on, canada",
+    "company": "CIBC",
+    "title": "Associate Technology Leadership Advancement Program Intern 🎓",
+    "location": "Toronto, ON, Canada",
+    "url": "https://cibc.wd3.myworkdayjobs.com/search/job/Toronto-ON/Associate-Technology-Leadership-Advancement-Program---Summer-2027_2623078-1?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Other",
+    "country": "Canada",
+    "first_seen": "2026-11-09T15:40:11.673102+00:00",
+    "last_seen": "2026-11-09T15:40:11.673074+00:00"
+  },
+  {
     "id": "wd:badgermeter.wd5.myworkdayjobs.com:job/US---WI---Milwaukee-HQ/Product-Management-Intern_4676",
     "company": "Badgermeter",
     "title": "Product Management Intern",
@@ -22,6 +46,54 @@
     "country": "United States",
     "first_seen": "2026-11-09T14:41:19.802783+00:00",
     "last_seen": "2026-11-09T14:41:19.802759+00:00"
+  },
+  {
+    "id": "li:4487927075",
+    "company": "Canyon Entertainment Group",
+    "title": "Project Management Internship",
+    "location": "Toronto, Ontario, Canada",
+    "url": "https://ca.linkedin.com/jobs/view/project-management-internship-at-canyon-entertainment-group-4487927075",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "Canada",
+    "first_seen": "2026-11-09T12:00:00+00:00",
+    "last_seen": "2026-11-09T15:40:51.791659+00:00"
+  },
+  {
+    "id": "li:4488883443",
+    "company": "NBCUniversal",
+    "title": "Studio Operations, Data Analytics Internships – Summer 2027",
+    "location": "Universal City, CA",
+    "url": "https://www.linkedin.com/jobs/view/studio-operations-data-analytics-internships-%E2%80%93-summer-2027-at-nbcuniversal-4488883443",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-09T12:00:00+00:00",
+    "last_seen": "2026-11-09T15:40:51.791659+00:00"
+  },
+  {
+    "id": "li:4487163682",
+    "company": "Pyrotek",
+    "title": "Intern - Product Management",
+    "location": "Spokane, WA",
+    "url": "https://www.linkedin.com/jobs/view/intern-product-management-at-pyrotek-4487163682",
+    "source": "LinkedIn",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-09T12:00:00+00:00",
+    "last_seen": "2026-11-09T15:40:51.791659+00:00"
+  },
+  {
+    "id": "li:4487912644",
+    "company": "U.S. Engineering",
+    "title": "Service Operations - Internship",
+    "location": "Kansas City, MO",
+    "url": "https://www.linkedin.com/jobs/view/service-operations-internship-at-u-s-engineering-4487912644",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-09T12:00:00+00:00",
+    "last_seen": "2026-11-09T15:40:51.791659+00:00"
   },
   {
     "id": "li:4488888241",
