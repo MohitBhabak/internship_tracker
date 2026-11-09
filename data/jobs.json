@@ -1,5 +1,29 @@
 [
   {
+    "id": "wd:vizient.wd1.myworkdayjobs.com:job/Chicago-IL-60607/XMLNAME-2027-Summer-Internship---HR-Strategy-and-Program-Management_35991R",
+    "company": "Vizient",
+    "title": "2027 Summer Internship - HR Strategy and Program Management",
+    "location": "Chicago, IL 60607",
+    "url": "https://vizient.wd1.myworkdayjobs.com/en-US/Vizient_Careers/job/Chicago-IL-60607/XMLNAME-2027-Summer-Internship---HR-Strategy-and-Program-Management_35991R",
+    "source": "Workday",
+    "category": "Other",
+    "country": "United States",
+    "first_seen": "2026-11-09T17:41:28.032194+00:00",
+    "last_seen": "2026-11-09T17:41:28.031900+00:00"
+  },
+  {
+    "id": "wd:thrivent.wd5.myworkdayjobs.com:job/Remote-Minnesota-Minneapolis-Metro/Talent-Acquisition-Operations-Intern---Spring-2027_REQ-49003",
+    "company": "Thrivent",
+    "title": "Talent Acquisition Operations Intern - Spring 2027",
+    "location": "8 Locations",
+    "url": "https://thrivent.wd5.myworkdayjobs.com/en-US/external/job/Remote-Minnesota-Minneapolis-Metro/Talent-Acquisition-Operations-Intern---Spring-2027_REQ-49003",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-09T17:41:28.031925+00:00",
+    "last_seen": "2026-11-09T17:41:28.031900+00:00"
+  },
+  {
     "id": "simplify:badger meter:product management intern:milwaukee, wi",
     "company": "Badger Meter",
     "title": "Product Management Intern",
@@ -46,6 +70,18 @@
     "country": "United States",
     "first_seen": "2026-11-09T14:41:19.802783+00:00",
     "last_seen": "2026-11-09T14:41:19.802759+00:00"
+  },
+  {
+    "id": "li:4487935121",
+    "company": "Clark National Accounts",
+    "title": "Project Management Intern (Hybrid)",
+    "location": "Lititz, PA",
+    "url": "https://www.linkedin.com/jobs/view/project-management-intern-hybrid-at-clark-national-accounts-4487935121",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-09T12:00:00+00:00",
+    "last_seen": "2026-11-09T17:40:46.631937+00:00"
   },
   {
     "id": "li:4487175648",
