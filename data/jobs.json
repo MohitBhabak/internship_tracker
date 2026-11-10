@@ -1,5 +1,17 @@
 [
   {
+    "id": "wd:valmont.wd1.myworkdayjobs.com:job/Omaha-NE/Operations-Intern_R29320",
+    "company": "Valmont",
+    "title": "Operations Intern",
+    "location": "2 Locations",
+    "url": "https://valmont.wd1.myworkdayjobs.com/en-US/ValmontCareers/job/Omaha-NE/Operations-Intern_R29320",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-10T18:01:35.721813+00:00",
+    "last_seen": "2026-11-10T18:01:35.721789+00:00"
+  },
+  {
     "id": "g:addepar1:8927575002",
     "company": "Addepar",
     "title": "Product Intern - Summer 2027",
@@ -58,6 +70,30 @@
     "country": "United States",
     "first_seen": "2026-11-10T14:41:47.249738+00:00",
     "last_seen": "2026-11-10T14:41:47.249717+00:00"
+  },
+  {
+    "id": "li:4454546380",
+    "company": "S&B USA Construction & Fay",
+    "title": "Field/Project Operations Internship- Heavy Civil Infrastructure Summer 2027 - PA",
+    "location": "Pittsburgh, PA",
+    "url": "https://www.linkedin.com/jobs/view/field-project-operations-internship-heavy-civil-infrastructure-summer-2027-pa-at-s-b-usa-construction-fay-4454546380",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-10T12:00:00+00:00",
+    "last_seen": "2026-11-10T18:00:47.712626+00:00"
+  },
+  {
+    "id": "li:4487497802",
+    "company": "Turtle Line",
+    "title": "Supply Chain & Operations Intern",
+    "location": "St Louis, MO",
+    "url": "https://www.linkedin.com/jobs/view/supply-chain-operations-intern-at-turtle-line-4487497802",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-10T12:00:00+00:00",
+    "last_seen": "2026-11-10T18:00:47.712626+00:00"
   },
   {
     "id": "li:4488605039",
