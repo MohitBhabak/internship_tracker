@@ -1,5 +1,41 @@
 [
   {
+    "id": "simplify:fnbo:banking product intern:omaha, ne",
+    "company": "FNBO",
+    "title": "Banking Product Intern",
+    "location": "Omaha, NE",
+    "url": "https://firstnational.wd12.myworkdayjobs.com/fnbocareers/job/Omaha---FN-Tower/Intern--Banking-Product_R-20261996?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-11T23:40:10.513207+00:00",
+    "last_seen": "2026-11-11T23:40:10.512895+00:00"
+  },
+  {
+    "id": "simplify:rubrik:product manager intern - managed service provider 🎓:palo alto, ca",
+    "company": "Rubrik",
+    "title": "Product Manager Intern - Managed Service Provider 🎓",
+    "location": "Palo Alto, CA",
+    "url": "https://www.rubrik.com/company/careers/departments/job.8346967?gh_jid=8346967&utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-11T23:40:10.513179+00:00",
+    "last_seen": "2026-11-11T23:40:10.512895+00:00"
+  },
+  {
+    "id": "simplify:mcdonald's:global tech infrastructure & operations intern:chicago, il",
+    "company": "McDonald's",
+    "title": "Global Tech Infrastructure & Operations Intern",
+    "location": "Chicago, IL",
+    "url": "https://jobs.mcdonalds.com/job/Chicago-Global-Tech-Infrastructure-&-Operations-Intern-IL-60607/1449562300/?ats=successfactors&utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-11T23:40:10.512969+00:00",
+    "last_seen": "2026-11-11T23:40:10.512895+00:00"
+  },
+  {
     "id": "wd:jabil.wd5.myworkdayjobs.com:job/St-PetersburgTampa-FL/Legal-Operations-Summer-Intern_J2471828",
     "company": "Jabil",
     "title": "Legal Operations Summer Intern",
@@ -34,6 +70,30 @@
     "country": "United States",
     "first_seen": "2026-11-11T15:40:12.239164+00:00",
     "last_seen": "2026-11-11T15:40:12.239135+00:00"
+  },
+  {
+    "id": "li:4490047600",
+    "company": "McKesson",
+    "title": "Operations Intern - Summer 2027 - Ruther Glen, VA",
+    "location": "Ruther Glen, VA",
+    "url": "https://www.linkedin.com/jobs/view/operations-intern-summer-2027-ruther-glen-va-at-mckesson-4490047600",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-11T12:00:00+00:00",
+    "last_seen": "2026-11-11T23:41:03.277017+00:00"
+  },
+  {
+    "id": "li:4488269185",
+    "company": "RT Specialty",
+    "title": "Brokerage Operations Intern",
+    "location": "Chicago, IL",
+    "url": "https://www.linkedin.com/jobs/view/brokerage-operations-intern-at-rt-specialty-4488269185",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-11T12:00:00+00:00",
+    "last_seen": "2026-11-11T23:41:03.277017+00:00"
   },
   {
     "id": "li:4489049098",
