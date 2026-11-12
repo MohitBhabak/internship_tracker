@@ -1,5 +1,17 @@
 [
   {
+    "id": "wd:tmobile.wd1.myworkdayjobs.com:job/Bellevue-Washington/Summer-2027-Data-Product-Internship_REQ381212",
+    "company": "Tmobile",
+    "title": "Summer 2027 Data Product Internship",
+    "location": "Bellevue, Washington",
+    "url": "https://tmobile.wd1.myworkdayjobs.com/en-US/External/job/Bellevue-Washington/Summer-2027-Data-Product-Internship_REQ381212",
+    "source": "Workday",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-12T16:01:18.488707+00:00",
+    "last_seen": "2026-11-12T16:01:18.488680+00:00"
+  },
+  {
     "id": "simplify:vizient:contract operations intern - analytics:irving, tx",
     "company": "Vizient",
     "title": "Contract Operations Intern - Analytics",
@@ -46,6 +58,18 @@
     "country": "Remote / Flexible",
     "first_seen": "2026-11-12T14:11:19.655869+00:00",
     "last_seen": "2026-11-12T14:11:19.655849+00:00"
+  },
+  {
+    "id": "li:4488509453",
+    "company": "Tenvault",
+    "title": "Project Management Intern",
+    "location": "Boston, MA",
+    "url": "https://www.linkedin.com/jobs/view/project-management-intern-at-tenvault-4488509453",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-12T12:00:00+00:00",
+    "last_seen": "2026-11-12T16:00:31.733428+00:00"
   },
   {
     "id": "li:4463088217",
