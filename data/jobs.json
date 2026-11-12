@@ -1,5 +1,17 @@
 [
   {
+    "id": "wd:caresource.wd1.myworkdayjobs.com:job/Remote/XMLNAME-2027-Summer-Internship-Program---Clinical-Operations-Business-Analyst_R14353",
+    "company": "Caresource",
+    "title": "2027 Summer Internship Program - Clinical Operations Business Analyst",
+    "location": "Remote",
+    "url": "https://caresource.wd1.myworkdayjobs.com/en-US/caresource/job/Remote/XMLNAME-2027-Summer-Internship-Program---Clinical-Operations-Business-Analyst_R14353",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-12T17:02:06.442758+00:00",
+    "last_seen": "2026-11-12T17:02:06.442732+00:00"
+  },
+  {
     "id": "wd:tmobile.wd1.myworkdayjobs.com:job/Bellevue-Washington/Summer-2027-Data-Product-Internship_REQ381212",
     "company": "Tmobile",
     "title": "Summer 2027 Data Product Internship",
@@ -58,6 +70,18 @@
     "country": "Remote / Flexible",
     "first_seen": "2026-11-12T14:11:19.655869+00:00",
     "last_seen": "2026-11-12T14:11:19.655849+00:00"
+  },
+  {
+    "id": "li:4490371310",
+    "company": "Republic Finance",
+    "title": "Branch Operations Intern",
+    "location": "Zachary, LA",
+    "url": "https://www.linkedin.com/jobs/view/branch-operations-intern-at-republic-finance-4490371310",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-12T12:00:00+00:00",
+    "last_seen": "2026-11-12T17:01:17.341317+00:00"
   },
   {
     "id": "li:4490349877",
