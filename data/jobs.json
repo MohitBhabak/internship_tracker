@@ -1,5 +1,17 @@
 [
   {
+    "id": "g:addepar1:8910306002",
+    "company": "Addepar",
+    "title": "Summer 2027 Internship - Product Analyst (Navigator)",
+    "location": "New York, NY",
+    "url": "https://job-boards.greenhouse.io/addepar1/jobs/8910306002",
+    "source": "ATS",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-13T23:01:14.998868+00:00",
+    "last_seen": "2026-11-13T23:01:14.998868+00:00"
+  },
+  {
     "id": "wd:jmfamily.wd1.myworkdayjobs.com:job/Florida---Deerfield-Beach/Fixed-Field-Operations-Intern_JR105129",
     "company": "Jmfamily",
     "title": "Fixed Field Operations Intern",
@@ -94,6 +106,30 @@
     "country": "United States",
     "first_seen": "2026-11-13T15:51:16.048227+00:00",
     "last_seen": "2026-11-13T15:51:16.048208+00:00"
+  },
+  {
+    "id": "li:4489490968",
+    "company": "Legrand",
+    "title": "Product Management Intern",
+    "location": "Syracuse, NY",
+    "url": "https://www.linkedin.com/jobs/view/product-management-intern-at-legrand-4489490968",
+    "source": "LinkedIn",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-13T12:00:00+00:00",
+    "last_seen": "2026-11-13T23:01:18.112819+00:00"
+  },
+  {
+    "id": "li:4490798348",
+    "company": "U.S. News & World Report",
+    "title": "Yearlong Product Intern, Health Providers (DC or NY)",
+    "location": "Washington, DC",
+    "url": "https://www.linkedin.com/jobs/view/yearlong-product-intern-health-providers-dc-or-ny-at-u-s-news-world-report-4490798348",
+    "source": "LinkedIn",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-13T12:00:00+00:00",
+    "last_seen": "2026-11-13T23:01:18.112819+00:00"
   },
   {
     "id": "li:4490784359",
