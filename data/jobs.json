@@ -1,5 +1,17 @@
 [
   {
+    "id": "wd:globalhr.wd5.myworkdayjobs.com:job/CA-QC-LONGUEUIL-J01--1000-Blvd-Marie-Victorin--J01-BLDG/Stage---Gestion-des-Programmes---Hiver-2027-Internship---Operations-Program-Management---Winter-2027_01873718-1",
+    "company": "RTX Global HR",
+    "title": "Stage - Gestion des Programmes - Hiver 2027 Internship - Operations Program Management - Winter 2027",
+    "location": "CA-QC-LONGUEUIL-J01 ~ 1000 Blvd Marie-Victorin ~ J01 BLDG",
+    "url": "https://globalhr.wd5.myworkdayjobs.com/en-US/Private_Posting_No_TMP/job/CA-QC-LONGUEUIL-J01--1000-Blvd-Marie-Victorin--J01-BLDG/Stage---Gestion-des-Programmes---Hiver-2027-Internship---Operations-Program-Management---Winter-2027_01873718-1",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-13T17:41:08.162025+00:00",
+    "last_seen": "2026-11-13T17:41:08.162001+00:00"
+  },
+  {
     "id": "simplify:entegris:associate product manager intern:chaska, mn",
     "company": "Entegris",
     "title": "Associate Product Manager Intern",
@@ -22,6 +34,18 @@
     "country": "United States",
     "first_seen": "2026-11-13T15:51:16.048227+00:00",
     "last_seen": "2026-11-13T15:51:16.048208+00:00"
+  },
+  {
+    "id": "li:4488970050",
+    "company": "Milliman",
+    "title": "Product Management Intern - Summer 2027 - IntelliScript",
+    "location": "Brookfield, WI",
+    "url": "https://www.linkedin.com/jobs/view/product-management-intern-summer-2027-intelliscript-at-milliman-4488970050",
+    "source": "LinkedIn",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-13T12:00:00+00:00",
+    "last_seen": "2026-11-13T17:40:26.587056+00:00"
   },
   {
     "id": "li:4490759437",
