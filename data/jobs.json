@@ -1,5 +1,17 @@
 [
   {
+    "id": "wd:labcorp.wd1.myworkdayjobs.com:job/Westborough-MA/Intern---Sales-Operations_2637883",
+    "company": "Labcorp",
+    "title": "Intern - Sales Operations",
+    "location": "Westborough MA",
+    "url": "https://labcorp.wd1.myworkdayjobs.com/en-US/external/job/Westborough-MA/Intern---Sales-Operations_2637883",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-16T20:41:15.787543+00:00",
+    "last_seen": "2026-11-16T20:41:15.787521+00:00"
+  },
+  {
     "id": "wd:workday.wd5.myworkdayjobs.com:job/Costa-Rica/Intern--UI-UX-Product-Manager_JR-0111665",
     "company": "Workday",
     "title": "Intern, UI/UX Product Manager",
