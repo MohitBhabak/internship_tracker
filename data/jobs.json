@@ -1,5 +1,29 @@
 [
   {
+    "id": "wd:manulife.wd3.myworkdayjobs.com:job/Toronto-Ontario/Summer-Intern-Co-op-2027---Canadian-Operations-Management--8-Months-_JR26100178",
+    "company": "Manulife",
+    "title": "Summer Intern/Co-op 2027 – Canadian Operations Management (8 Months)",
+    "location": "Toronto, Ontario",
+    "url": "https://manulife.wd3.myworkdayjobs.com/en-US/MFCJH_Jobs/job/Toronto-Ontario/Summer-Intern-Co-op-2027---Canadian-Operations-Management--8-Months-_JR26100178",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "Canada",
+    "first_seen": "2026-11-16T14:21:44.134496+00:00",
+    "last_seen": "2026-11-16T14:21:44.134470+00:00"
+  },
+  {
+    "id": "g:neo4j:4729795006",
+    "company": "Neo4j",
+    "title": "Summer Internship - Customer Support Operations & Supportability",
+    "location": "Malmö",
+    "url": "https://boards.greenhouse.io/neo4j/jobs/4729795006?gh_jid=4729795006",
+    "source": "ATS",
+    "category": "Operations",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-16T14:21:03.709386+00:00",
+    "last_seen": "2026-11-16T14:21:03.709386+00:00"
+  },
+  {
     "id": "g:hootsuite:8392381",
     "company": "Hootsuite",
     "title": "Co-op/Intern, People Team & Operations - Winter 2027",
