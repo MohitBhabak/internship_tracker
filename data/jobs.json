@@ -1,5 +1,29 @@
 [
   {
+    "id": "wd:gevernova.wd5.myworkdayjobs.com:job/Clearwater/GE-Vernova-Internship---2027-Project-Management-Office_R5059079-2",
+    "company": "GE Vernova",
+    "title": "GE Vernova Internship – 2027 Project Management Office",
+    "location": "Clearwater",
+    "url": "https://gevernova.wd5.myworkdayjobs.com/en-US/vernova_externalsite/job/Clearwater/GE-Vernova-Internship---2027-Project-Management-Office_R5059079-2",
+    "source": "Workday",
+    "category": "Project Management",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-16T15:21:03.567738+00:00",
+    "last_seen": "2026-11-16T15:21:03.567548+00:00"
+  },
+  {
+    "id": "wd:gevernova.wd5.myworkdayjobs.com:job/Clearwater/GE-Vernova-Internship---2027-Project-Management-Office_R5059079-1",
+    "company": "GE Vernova",
+    "title": "GE Vernova Internship – 2027 Project Management Office",
+    "location": "Clearwater",
+    "url": "https://gevernova.wd5.myworkdayjobs.com/en-US/only_confidential_executive_recruiting/job/Clearwater/GE-Vernova-Internship---2027-Project-Management-Office_R5059079-1",
+    "source": "Workday",
+    "category": "Project Management",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-16T15:21:03.567571+00:00",
+    "last_seen": "2026-11-16T15:21:03.567548+00:00"
+  },
+  {
     "id": "g:addepar1:8910324002",
     "company": "Addepar",
     "title": "Technical Product Management Intern (ADX) - Summer 2027",
@@ -46,6 +70,18 @@
     "country": "Canada",
     "first_seen": "2026-11-16T13:00:35.476070+00:00",
     "last_seen": "2026-11-16T13:00:35.476070+00:00"
+  },
+  {
+    "id": "li:4489767853",
+    "company": "Pike Electric",
+    "title": "Student Intern: Assistant Project Manager",
+    "location": "Fort Worth, TX",
+    "url": "https://www.linkedin.com/jobs/view/student-intern-assistant-project-manager-at-pike-electric-4489767853",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-16T12:00:00+00:00",
+    "last_seen": "2026-11-16T15:20:22.710641+00:00"
   },
   {
     "id": "li:4489783124",
