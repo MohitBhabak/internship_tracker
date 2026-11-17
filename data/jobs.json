@@ -1,5 +1,41 @@
 [
   {
+    "id": "simplify:servicenow:inbound product manager intern 🎓:san diego, ca",
+    "company": "ServiceNow",
+    "title": "Inbound Product Manager Intern 🎓",
+    "location": "San Diego, CA",
+    "url": "https://jobs.smartrecruiters.com/ServiceNow/744000161885234?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-17T00:10:16.319268+00:00",
+    "last_seen": "2026-11-17T00:10:16.319044+00:00"
+  },
+  {
+    "id": "simplify:bound:product management intern:ames, ia",
+    "company": "Bound",
+    "title": "Product Management Intern",
+    "location": "Ames, IA",
+    "url": "https://ats.rippling.com/bound/jobs/40a62113-cdcc-4fad-a3e6-008597702316?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-17T00:10:16.319242+00:00",
+    "last_seen": "2026-11-17T00:10:16.319044+00:00"
+  },
+  {
+    "id": "simplify:duetti:product intern 🎓:nyc",
+    "company": "Duetti",
+    "title": "Product Intern 🎓",
+    "location": "NYC",
+    "url": "https://jobs.lever.co/duetti/cbc1ad6f-ec3d-42d8-8a53-9cd2712787b2/apply?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-17T00:10:16.319073+00:00",
+    "last_seen": "2026-11-17T00:10:16.319044+00:00"
+  },
+  {
     "id": "g:andurilindustries:5297134007",
     "company": "Anduril",
     "title": "2027 Mission Operations Engineer Intern",
@@ -154,6 +190,30 @@
     "country": "Canada",
     "first_seen": "2026-11-16T13:00:35.476070+00:00",
     "last_seen": "2026-11-16T13:00:35.476070+00:00"
+  },
+  {
+    "id": "li:4491543611",
+    "company": "Menasha Corporation",
+    "title": "Operations Management Intern",
+    "location": "Neenah, WI",
+    "url": "https://www.linkedin.com/jobs/view/operations-management-intern-at-menasha-corporation-4491543611",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-16T12:00:00+00:00",
+    "last_seen": "2026-11-17T00:10:32.105396+00:00"
+  },
+  {
+    "id": "li:4491532728",
+    "company": "T-Mobile",
+    "title": "Summer 2027 Assoc Program Manager Internship",
+    "location": "Overland Park, KS",
+    "url": "https://www.linkedin.com/jobs/view/summer-2027-assoc-program-manager-internship-at-t-mobile-4491532728",
+    "source": "LinkedIn",
+    "category": "Other",
+    "country": "United States",
+    "first_seen": "2026-11-16T12:00:00+00:00",
+    "last_seen": "2026-11-17T00:10:32.105396+00:00"
   },
   {
     "id": "li:4491539655",
