@@ -1,5 +1,17 @@
 [
   {
+    "id": "simplify:uber:product management intern:sf",
+    "company": "Uber",
+    "title": "Product Management Intern",
+    "location": "SF",
+    "url": "https://iaziqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/304983?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-18T00:10:11.665616+00:00",
+    "last_seen": "2026-11-18T00:10:11.665577+00:00"
+  },
+  {
     "id": "simplify:new york city housing development corporation:strategic operations graduate intern:nyc",
     "company": "New York City Housing Development Corporation",
     "title": "Strategic Operations Graduate Intern",
@@ -118,6 +130,30 @@
     "country": "Remote / Flexible",
     "first_seen": "2026-11-17T16:41:09.728273+00:00",
     "last_seen": "2026-11-17T16:41:09.728235+00:00"
+  },
+  {
+    "id": "li:4491450265",
+    "company": "Eversource Energy",
+    "title": "2027 Gas Project Management Co-op",
+    "location": "Westborough, MA",
+    "url": "https://www.linkedin.com/jobs/view/2027-gas-project-management-co-op-at-eversource-energy-4491450265",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-17T12:00:00+00:00",
+    "last_seen": "2026-11-18T00:11:05.023001+00:00"
+  },
+  {
+    "id": "li:4491444548",
+    "company": "Eversource Energy",
+    "title": "2027 Gas Project Management Co-op",
+    "location": "Berlin, CT",
+    "url": "https://www.linkedin.com/jobs/view/2027-gas-project-management-co-op-at-eversource-energy-4491444548",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-17T12:00:00+00:00",
+    "last_seen": "2026-11-18T00:11:05.023001+00:00"
   },
   {
     "id": "li:4491770157",
