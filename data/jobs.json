@@ -1,5 +1,17 @@
 [
   {
+    "id": "wd:crowdstrike.wd5.myworkdayjobs.com:job/USA---Sunnyvale-CA/MBA-Product-Manager-Intern_R30957",
+    "company": "CrowdStrike",
+    "title": "MBA Product Manager Intern",
+    "location": "2 Locations",
+    "url": "https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers/job/USA---Sunnyvale-CA/MBA-Product-Manager-Intern_R30957",
+    "source": "Workday",
+    "category": "Product Management (PM)",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-18T17:21:24.678536+00:00",
+    "last_seen": "2026-11-18T17:21:24.678513+00:00"
+  },
+  {
     "id": "wd:globalhr.wd5.myworkdayjobs.com:job/US-IA-CEDAR-RAPIDS-193--1120-Collins-Rd-NE--BLDG193/Digital-Technologies-Project-Management-Office-Operations-Intern--Summer-2027-_01884834",
     "company": "RTX Global HR",
     "title": "Digital Technologies Project Management Office Operations Intern (Summer 2027)",
@@ -34,6 +46,30 @@
     "country": "Remote / Flexible",
     "first_seen": "2026-11-18T16:01:20.671767+00:00",
     "last_seen": "2026-11-18T16:01:20.671742+00:00"
+  },
+  {
+    "id": "li:4491301993",
+    "company": "Trivelo Marketing",
+    "title": "Project Management Intern",
+    "location": "Boston, MA",
+    "url": "https://www.linkedin.com/jobs/view/project-management-intern-at-trivelo-marketing-4491301993",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-18T12:00:00+00:00",
+    "last_seen": "2026-11-18T17:20:53.984889+00:00"
+  },
+  {
+    "id": "li:4491873214",
+    "company": "Westinghouse Electric Company",
+    "title": "Summer Intern - Project Management",
+    "location": "Cranberry Township, PA",
+    "url": "https://www.linkedin.com/jobs/view/summer-intern-project-management-at-westinghouse-electric-company-4491873214",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-18T12:00:00+00:00",
+    "last_seen": "2026-11-18T17:20:53.984889+00:00"
   },
   {
     "id": "li:4457147570",
