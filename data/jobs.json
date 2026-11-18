@@ -1,5 +1,17 @@
 [
   {
+    "id": "wd:axos.wd5.myworkdayjobs.com:job/HQ---San-Diego-CA/Product-Intern_JR5648",
+    "company": "Axos",
+    "title": "Product Intern",
+    "location": "HQ - San Diego, CA",
+    "url": "https://axos.wd5.myworkdayjobs.com/en-US/Axos/job/HQ---San-Diego-CA/Product-Intern_JR5648",
+    "source": "Workday",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-18T22:31:22.234677+00:00",
+    "last_seen": "2026-11-18T22:31:22.234654+00:00"
+  },
+  {
     "id": "wd:target.wd5.myworkdayjobs.com:job/1-Walker-Way-West-JeffersonOH-43162-9406/Operations-Manager-Intern--Starting-Summer-2027--Regional-Distribution-Center--West-Jefferson--OH_R0000450139",
     "company": "Target",
     "title": "Operations Manager Intern (Starting Summer 2027) Regional Distribution Center, West Jefferson, OH",
@@ -82,6 +94,30 @@
     "country": "Remote / Flexible",
     "first_seen": "2026-11-18T16:01:20.671767+00:00",
     "last_seen": "2026-11-18T16:01:20.671742+00:00"
+  },
+  {
+    "id": "li:4491892426",
+    "company": "CSM Corporation",
+    "title": "Construction Project Management Intern | Summer 2027",
+    "location": "Minneapolis, MN",
+    "url": "https://www.linkedin.com/jobs/view/construction-project-management-intern-summer-2027-at-csm-corporation-4491892426",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-18T12:00:00+00:00",
+    "last_seen": "2026-11-18T22:30:46.526915+00:00"
+  },
+  {
+    "id": "li:4491348099",
+    "company": "Vylor",
+    "title": "Plant Operations Coordinator Intern",
+    "location": "Chatham, Ontario, Canada",
+    "url": "https://ca.linkedin.com/jobs/view/plant-operations-coordinator-intern-at-vylor-4491348099",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "Canada",
+    "first_seen": "2026-11-18T12:00:00+00:00",
+    "last_seen": "2026-11-18T22:30:46.526915+00:00"
   },
   {
     "id": "li:4474986601",
