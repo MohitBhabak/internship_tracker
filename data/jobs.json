@@ -1,5 +1,29 @@
 [
   {
+    "id": "simplify:lucid:product management intern:raleigh, nc",
+    "company": "Lucid",
+    "title": "Product Management Intern",
+    "location": "Raleigh, NC",
+    "url": "https://job-boards.greenhouse.io/lucidsoftware/jobs/6239818004?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-19T00:10:11.293123+00:00",
+    "last_seen": "2026-11-19T00:10:11.292894+00:00"
+  },
+  {
+    "id": "simplify:lucid:product management intern:salt lake city, ut",
+    "company": "Lucid",
+    "title": "Product Management Intern",
+    "location": "Salt Lake City, UT",
+    "url": "https://job-boards.greenhouse.io/lucidsoftware/jobs/6239814004?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-19T00:10:11.292921+00:00",
+    "last_seen": "2026-11-19T00:10:11.292894+00:00"
+  },
+  {
     "id": "wd:axos.wd5.myworkdayjobs.com:job/HQ---San-Diego-CA/Product-Intern_JR5648",
     "company": "Axos",
     "title": "Product Intern",
@@ -6742,6 +6766,18 @@
     "country": "United States",
     "first_seen": "2026-11-07T00:51:02+00:00",
     "last_seen": "2026-11-07T00:51:02+00:00"
+  },
+  {
+    "id": "wd:philips.wd3.myworkdayjobs.com:job/Warszawa/Customer-Project-Intern--all-genders-_595024",
+    "company": "Philips",
+    "title": "Customer Project Intern (all genders)",
+    "location": "Warszawa",
+    "url": "https://philips.wd3.myworkdayjobs.com/en-US/jobs-and-careers/job/Warszawa/Customer-Project-Intern--all-genders-_595024",
+    "source": "Workday",
+    "category": "Project Management",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-07T00:11:03.646915+00:00",
+    "last_seen": "2026-11-19T00:11:03.646892+00:00"
   },
   {
     "id": "wd:globalhr.wd5.myworkdayjobs.com:job/US-FL-MELBOURNE-308--1100-W-Hibiscus-Blvd--BLDG-308/Manufacturing-Engineering-Ops-Co-Op--Summer-Fall-2027-_01886462",
