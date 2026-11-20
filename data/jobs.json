@@ -1,5 +1,29 @@
 [
   {
+    "id": "wd:rockwellautomation.wd1.myworkdayjobs.com:job/Chelmsford-Massachusetts-United-States/Intern--Commercial-Operations--LCS-_R26-5067-2",
+    "company": "Rockwellautomation",
+    "title": "Intern, Commercial Operations (LCS)",
+    "location": "2 Locations",
+    "url": "https://rockwellautomation.wd1.myworkdayjobs.com/en-US/External_Rockwell_Automation/job/Chelmsford-Massachusetts-United-States/Intern--Commercial-Operations--LCS-_R26-5067-2",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-20T16:31:05.796421+00:00",
+    "last_seen": "2026-11-20T16:31:05.796189+00:00"
+  },
+  {
+    "id": "wd:rockwellautomation.wd1.myworkdayjobs.com:job/Chelmsford-Massachusetts-United-States/Intern--Commercial-Operations--LCS-_R26-5067-1",
+    "company": "Rockwellautomation",
+    "title": "Intern, Commercial Operations (LCS)",
+    "location": "2 Locations",
+    "url": "https://rockwellautomation.wd1.myworkdayjobs.com/en-US/External-Rockwell-Automation-Early-Careers/job/Chelmsford-Massachusetts-United-States/Intern--Commercial-Operations--LCS-_R26-5067-1",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-20T16:31:05.796213+00:00",
+    "last_seen": "2026-11-20T16:31:05.796189+00:00"
+  },
+  {
     "id": "wd:amgen.wd1.myworkdayjobs.com:job/United-States---Remote/Graduate-Intern---R-D-Execution--Operations---Strategy--R-D-EOS--summer-2027-_R-260018",
     "company": "Amgen",
     "title": "Graduate Intern – R&D Execution, Operations & Strategy (R&D EOS)(summer 2027)",
@@ -46,6 +70,30 @@
     "country": "United States",
     "first_seen": "2026-11-20T14:11:19.038230+00:00",
     "last_seen": "2026-11-20T14:11:19.038204+00:00"
+  },
+  {
+    "id": "li:4492953296",
+    "company": "AriensCo",
+    "title": "Product Management Intern",
+    "location": "Brillion, WI",
+    "url": "https://www.linkedin.com/jobs/view/product-management-intern-at-ariensco-4492953296",
+    "source": "LinkedIn",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-20T12:00:00+00:00",
+    "last_seen": "2026-11-20T16:30:27.517414+00:00"
+  },
+  {
+    "id": "li:4491948020",
+    "company": "Brackwell Hiring Network",
+    "title": "Technical Operations Packaging Co-Op",
+    "location": "Boston, MA",
+    "url": "https://www.linkedin.com/jobs/view/technical-operations-packaging-co-op-at-brackwell-hiring-network-4491948020",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-20T12:00:00+00:00",
+    "last_seen": "2026-11-20T16:30:27.517414+00:00"
   },
   {
     "id": "li:4486095690",
