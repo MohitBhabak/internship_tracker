@@ -1,5 +1,29 @@
 [
   {
+    "id": "wd:modernatx.wd1.myworkdayjobs.com:job/Cambridge-Massachusetts/XMLNAME-2027-Intern--TMF-Systems---Operations_R20220",
+    "company": "Modernatx",
+    "title": "2027 Intern, TMF Systems & Operations",
+    "location": "",
+    "url": "https://modernatx.wd1.myworkdayjobs.com/en-US/M_tx/job/Cambridge-Massachusetts/XMLNAME-2027-Intern--TMF-Systems---Operations_R20220",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-20T19:21:53.503613+00:00",
+    "last_seen": "2026-11-20T19:21:53.503408+00:00"
+  },
+  {
+    "id": "wd:aaaie.wd1.myworkdayjobs.com:job/Arizona---Home-Teleworkers/PS-D-Innovation-Intern_R8004",
+    "company": "Aaaie",
+    "title": "Product Strategy & Development Intern",
+    "location": "Arizona - Home Teleworkers",
+    "url": "https://aaaie.wd1.myworkdayjobs.com/en-US/CSAACareers2/job/Arizona---Home-Teleworkers/PS-D-Innovation-Intern_R8004",
+    "source": "Workday",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-20T19:21:53.503437+00:00",
+    "last_seen": "2026-11-20T19:21:53.503408+00:00"
+  },
+  {
     "id": "wd:generalmotors.wd5.myworkdayjobs.com:job/Warren-Michigan-United-States-of-America/XMLNAME-2027-Summer-Intern---Cybersecurity-Education---Awareness-Program-Intern_JR-202624606",
     "company": "Generalmotors",
     "title": "2027 Summer Intern - Cybersecurity Education & Awareness Program Intern",
@@ -142,6 +166,66 @@
     "country": "United States",
     "first_seen": "2026-11-20T14:11:19.038230+00:00",
     "last_seen": "2026-11-20T14:11:19.038204+00:00"
+  },
+  {
+    "id": "li:4457604555",
+    "company": "ARCO Design/Build",
+    "title": "Construction Project Manager Intern or Co-Op (Summer 2027)",
+    "location": "Louisville, KY",
+    "url": "https://www.linkedin.com/jobs/view/construction-project-manager-intern-or-co-op-summer-2027-at-arco-design-build-4457604555",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-20T12:00:00+00:00",
+    "last_seen": "2026-11-20T19:21:14.498330+00:00"
+  },
+  {
+    "id": "li:4457184733",
+    "company": "ARCO Design/Build",
+    "title": "Construction Project Manager Intern or Co-Op (Summer 2027)",
+    "location": "Ponte Vedra Beach, FL",
+    "url": "https://www.linkedin.com/jobs/view/construction-project-manager-intern-or-co-op-summer-2027-at-arco-design-build-4457184733",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-20T12:00:00+00:00",
+    "last_seen": "2026-11-20T19:21:14.498330+00:00"
+  },
+  {
+    "id": "li:4477431833",
+    "company": "Bombardier",
+    "title": "Stagiaire, gestion de projet - support à la production (Hiver 2027)",
+    "location": "Pointe-Claire, Quebec, Canada",
+    "url": "https://ca.linkedin.com/jobs/view/stagiaire-gestion-de-projet-support-%C3%A0-la-production-hiver-2027-at-bombardier-4477431833",
+    "source": "LinkedIn",
+    "category": "Other",
+    "country": "Canada",
+    "first_seen": "2026-11-20T12:00:00+00:00",
+    "last_seen": "2026-11-20T19:21:14.498330+00:00"
+  },
+  {
+    "id": "li:4477493883",
+    "company": "Bombardier",
+    "title": "Stagiaire, gestion de projet - support à la production (Hiver 2027)",
+    "location": "Pointe-Claire, Quebec, Canada",
+    "url": "https://ca.linkedin.com/jobs/view/stagiaire-gestion-de-projet-support-%C3%A0-la-production-hiver-2027-at-bombardier-4477493883",
+    "source": "LinkedIn",
+    "category": "Other",
+    "country": "Canada",
+    "first_seen": "2026-11-20T12:00:00+00:00",
+    "last_seen": "2026-11-20T19:21:14.498330+00:00"
+  },
+  {
+    "id": "li:4492598545",
+    "company": "Delta Air Lines",
+    "title": "Co-Op, Operations Planning and Performance - Reporting and Analytics (Spring 2027)",
+    "location": "Atlanta, GA",
+    "url": "https://www.linkedin.com/jobs/view/co-op-operations-planning-and-performance-reporting-and-analytics-spring-2027-at-delta-air-lines-4492598545",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-20T12:00:00+00:00",
+    "last_seen": "2026-11-20T19:21:14.498330+00:00"
   },
   {
     "id": "li:4492970761",
