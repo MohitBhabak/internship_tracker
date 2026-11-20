@@ -1,5 +1,41 @@
 [
   {
+    "id": "wd:rb.wd5.myworkdayjobs.com:job/Atlanta-GA/XMLNAME-2027-Summer-Internship-Program---Facilities-Operations-Intern_R-0000033882",
+    "company": "Rb",
+    "title": "2027 Summer Internship Program - Facilities Operations Intern",
+    "location": "Atlanta, GA",
+    "url": "https://rb.wd5.myworkdayjobs.com/en-US/FRS/job/Atlanta-GA/XMLNAME-2027-Summer-Internship-Program---Facilities-Operations-Intern_R-0000033882",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-20T14:11:19.038230+00:00",
+    "last_seen": "2026-11-20T14:11:19.038204+00:00"
+  },
+  {
+    "id": "li:4467120829",
+    "company": "Delta Air Lines",
+    "title": "Co-op, Line Operation - Operational Performance (Summer 2027)",
+    "location": "Atlanta, GA",
+    "url": "https://www.linkedin.com/jobs/view/co-op-line-operation-operational-performance-summer-2027-at-delta-air-lines-4467120829",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-20T12:00:00+00:00",
+    "last_seen": "2026-11-20T14:10:41.737751+00:00"
+  },
+  {
+    "id": "li:4464420950",
+    "company": "Merck",
+    "title": "2027 Future Talent Program - Global Supplier Management Group Business Ops - Co-op",
+    "location": "West Point, PA",
+    "url": "https://www.linkedin.com/jobs/view/2027-future-talent-program-global-supplier-management-group-business-ops-co-op-at-merck-4464420950",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-20T12:00:00+00:00",
+    "last_seen": "2026-11-20T14:10:41.737751+00:00"
+  },
+  {
     "id": "li:4477178732",
     "company": "Nissan Motor Corporation",
     "title": "NMAC Sales Ops Intern - Summer 2027 - Franklin, TN",
