@@ -7740,6 +7740,18 @@
     "last_seen": "2026-11-09T16:10:12.163504+00:00"
   },
   {
+    "id": "wd:elkay.wd1.myworkdayjobs.com:job/Downers-Grove-IL/Product-Management-Intern---Summer-2027_REQ-020065",
+    "company": "Elkay",
+    "title": "Product Management Intern - Summer 2027",
+    "location": "Downers Grove, IL",
+    "url": "https://elkay.wd1.myworkdayjobs.com/en-US/Elkay_External/job/Downers-Grove-IL/Product-Management-Intern---Summer-2027_REQ-020065",
+    "source": "Workday",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-06T16:01:30.226686+00:00",
+    "last_seen": "2026-11-20T16:01:30.226661+00:00"
+  },
+  {
     "id": "wd:stryker.wd1.myworkdayjobs.com:job/Portage-Michigan/Summer-2027-Internship---Project-Management---Michigan_R572587-1",
     "company": "Stryker",
     "title": "Summer 2027 Internship - Project Management - Michigan",
@@ -7810,6 +7822,18 @@
     "country": "Remote / Flexible",
     "first_seen": "2026-11-04T14:41:41.238212+00:00",
     "last_seen": "2026-11-18T14:41:41.238188+00:00"
+  },
+  {
+    "id": "wd:elkay.wd1.myworkdayjobs.com:job/Downers-Grove-IL/CY27-Intern---Project-Management-Intern_REQ-020094",
+    "company": "Elkay",
+    "title": "Project Management Intern (Summer 2027)",
+    "location": "Downers Grove, IL",
+    "url": "https://elkay.wd1.myworkdayjobs.com/en-US/Elkay_External/job/Downers-Grove-IL/CY27-Intern---Project-Management-Intern_REQ-020094",
+    "source": "Workday",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-03T16:01:30.226970+00:00",
+    "last_seen": "2026-11-20T16:01:30.226661+00:00"
   },
   {
     "id": "simplify:toshiba global commerce solutions:ai automation & revenue ops intern:durham, nc",
