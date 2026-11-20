@@ -1,5 +1,17 @@
 [
   {
+    "id": "wd:asml.wd3.myworkdayjobs.com:job/Chandler-AZ-USA/Internship---Learning-Operations---Continuous-Improvement-Intern_J-00357560",
+    "company": "Asml",
+    "title": "Internship - Learning Operations & Continuous Improvement Intern",
+    "location": "Chandler, AZ, USA",
+    "url": "https://asml.wd3.myworkdayjobs.com/en-US/asmlext1/job/Chandler-AZ-USA/Internship---Learning-Operations---Continuous-Improvement-Intern_J-00357560",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-20T17:31:16.446674+00:00",
+    "last_seen": "2026-11-20T17:31:16.446650+00:00"
+  },
+  {
     "id": "wd:target.wd5.myworkdayjobs.com:job/25-N-75th-Ave-PhoenixAZ-85043-2109/Operation-Manager-Intern--Starting-Summer-2027--Regional-Distribution-Center---Phoenix--AZ_R0000450404",
     "company": "Target",
     "title": "Operation Manager Intern (Starting Summer 2027) Regional Distribution Center - Phoenix, AZ",
@@ -106,6 +118,18 @@
     "country": "United States",
     "first_seen": "2026-11-20T14:11:19.038230+00:00",
     "last_seen": "2026-11-20T14:11:19.038204+00:00"
+  },
+  {
+    "id": "li:4491937771",
+    "company": "Ralph Lauren",
+    "title": "Digital Project Management Intern",
+    "location": "New York, NY",
+    "url": "https://www.linkedin.com/jobs/view/digital-project-management-intern-at-ralph-lauren-4491937771",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-20T12:00:00+00:00",
+    "last_seen": "2026-11-20T17:30:41.951673+00:00"
   },
   {
     "id": "li:4491949047",
