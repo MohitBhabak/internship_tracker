@@ -1,5 +1,17 @@
 [
   {
+    "id": "wd:amgen.wd1.myworkdayjobs.com:job/United-States---Remote/Graduate-Intern---R-D-Execution--Operations---Strategy--R-D-EOS--summer-2027-_R-260018",
+    "company": "Amgen",
+    "title": "Graduate Intern – R&D Execution, Operations & Strategy (R&D EOS)(summer 2027)",
+    "location": "United States - Remote",
+    "url": "https://amgen.wd1.myworkdayjobs.com/en-US/careers/job/United-States---Remote/Graduate-Intern---R-D-Execution--Operations---Strategy--R-D-EOS--summer-2027-_R-260018",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-20T15:51:06.981092+00:00",
+    "last_seen": "2026-11-20T15:51:06.981069+00:00"
+  },
+  {
     "id": "wd:stryker.wd1.myworkdayjobs.com:job/San-Jose-California/Summer-2027-Internship---Sales-Operations-Intern---San-Jose--CA_R572806",
     "company": "Stryker",
     "title": "Summer 2027 Internship - Sales Operations Intern - San Jose, CA",
@@ -34,6 +46,18 @@
     "country": "United States",
     "first_seen": "2026-11-20T14:11:19.038230+00:00",
     "last_seen": "2026-11-20T14:11:19.038204+00:00"
+  },
+  {
+    "id": "li:4486095690",
+    "company": "Saskatchewan Research Council (SRC)",
+    "title": "Engineering Co-Op Student (Operations)",
+    "location": "Saskatoon, Saskatchewan, Canada",
+    "url": "https://ca.linkedin.com/jobs/view/engineering-co-op-student-operations-at-saskatchewan-research-council-src-4486095690",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "Canada",
+    "first_seen": "2026-11-20T12:00:00+00:00",
+    "last_seen": "2026-11-20T15:50:30.405514+00:00"
   },
   {
     "id": "li:4466241175",
