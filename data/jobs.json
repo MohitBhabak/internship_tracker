@@ -1,5 +1,29 @@
 [
   {
+    "id": "simplify:icapital network:product management intern:nyc",
+    "company": "iCapital Network",
+    "title": "Product Management Intern",
+    "location": "NYC",
+    "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8944694002?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-21T00:10:14.165426+00:00",
+    "last_seen": "2026-11-21T00:10:14.165222+00:00"
+  },
+  {
+    "id": "simplify:method:product management intern:5 locationsremote in usa · santa clara, ca · charlotte, nc · nyc · remote in canada",
+    "company": "Method",
+    "title": "Product Management Intern",
+    "location": "5 locationsRemote in USA · Santa Clara, CA · Charlotte, NC · NYC · Remote in Canada",
+    "url": "https://job-boards.greenhouse.io/method/jobs/8207585003?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "Canada",
+    "first_seen": "2026-11-21T00:10:14.165252+00:00",
+    "last_seen": "2026-11-21T00:10:14.165222+00:00"
+  },
+  {
     "id": "simplify:mackenzie investments:ai program intern:toronto, on, canada",
     "company": "Mackenzie Investments",
     "title": "AI Program Intern",
