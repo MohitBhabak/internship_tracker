@@ -1224,6 +1224,18 @@
     "last_seen": "2026-11-20T08:10:11.562798+00:00"
   },
   {
+    "id": "wd:trimble.wd1.myworkdayjobs.com:job/US---CO-Westminster/Program-Management-Analyst-Intern_R58472",
+    "company": "Trimble",
+    "title": "Program Management Analyst Intern",
+    "location": "US - CO, Westminster",
+    "url": "https://trimble.wd1.myworkdayjobs.com/en-US/TrimbleCareers/job/US---CO-Westminster/Program-Management-Analyst-Intern_R58472",
+    "source": "Workday",
+    "category": "Other",
+    "country": "United States",
+    "first_seen": "2026-11-20T05:21:09.388407+00:00",
+    "last_seen": "2026-11-22T05:21:09.388386+00:00"
+  },
+  {
     "id": "wd:leidos.wd5.myworkdayjobs.com:job/Shiloh-IL/Network-Engineering---Operations-Intern_R-00197385",
     "company": "Leidos",
     "title": "Network Engineering & Operations Intern",
