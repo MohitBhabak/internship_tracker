@@ -1,5 +1,17 @@
 [
   {
+    "id": "wd:rbc.wd3.myworkdayjobs.com:job/Minneapolis-Minnesota-United-States-of-America/Summer-2027-Wealth-Management-Operations-Internship_R-0000187994-2",
+    "company": "Rbc",
+    "title": "Summer 2027 Wealth Management Operations Internship",
+    "location": "Minneapolis, Minnesota, United States of America",
+    "url": "https://rbc.wd3.myworkdayjobs.com/en-US/ExternalPrivatePostingStudents/job/Minneapolis-Minnesota-United-States-of-America/Summer-2027-Wealth-Management-Operations-Internship_R-0000187994-2",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-23T22:41:09.843060+00:00",
+    "last_seen": "2026-11-23T22:41:09.843029+00:00"
+  },
+  {
     "id": "g:nuro:8412577",
     "company": "Nuro",
     "title": "Technical Program Manager, Systems Intern",
@@ -94,6 +106,42 @@
     "country": "United States",
     "first_seen": "2026-11-23T14:11:07.828115+00:00",
     "last_seen": "2026-11-23T14:11:07.828093+00:00"
+  },
+  {
+    "id": "li:4494063806",
+    "company": "Electric Power Engineers",
+    "title": "Product Management Intern",
+    "location": "Austin, TX",
+    "url": "https://www.linkedin.com/jobs/view/product-management-intern-at-electric-power-engineers-4494063806",
+    "source": "LinkedIn",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-23T12:00:00+00:00",
+    "last_seen": "2026-11-23T22:40:32.795095+00:00"
+  },
+  {
+    "id": "li:4493933006",
+    "company": "Hightower Advisors",
+    "title": "Operations Internship",
+    "location": "Chicago, IL",
+    "url": "https://www.linkedin.com/jobs/view/operations-internship-at-hightower-advisors-4493933006",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-23T12:00:00+00:00",
+    "last_seen": "2026-11-23T22:40:32.795095+00:00"
+  },
+  {
+    "id": "li:4493910908",
+    "company": "Hightower Advisors",
+    "title": "Trust Operations Internship",
+    "location": "Houston, TX",
+    "url": "https://www.linkedin.com/jobs/view/trust-operations-internship-at-hightower-advisors-4493910908",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-23T12:00:00+00:00",
+    "last_seen": "2026-11-23T22:40:32.795095+00:00"
   },
   {
     "id": "li:4494062807",
