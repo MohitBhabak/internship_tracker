@@ -1,5 +1,17 @@
 [
   {
+    "id": "wd:manulife.wd3.myworkdayjobs.com:job/Toronto-Ontario/Winter-Co-op-2027---Canadian-Operations-Analyst--8-Months-_JR26091403",
+    "company": "Manulife",
+    "title": "Winter Co-op 2027 - Canadian Operations Analyst (8 Months)",
+    "location": "4 Locations",
+    "url": "https://manulife.wd3.myworkdayjobs.com/en-US/MFCJH_Jobs/job/Toronto-Ontario/Winter-Co-op-2027---Canadian-Operations-Analyst--8-Months-_JR26091403",
+    "source": "Workday",
+    "category": "Operations",
+    "country": "Remote / Flexible",
+    "first_seen": "2026-11-24T17:11:45.889256+00:00",
+    "last_seen": "2026-11-24T17:11:45.889238+00:00"
+  },
+  {
     "id": "simplify:fanatics:product management intern - card tech:nyc",
     "company": "Fanatics",
     "title": "Product Management Intern - Card Tech",
@@ -46,6 +58,18 @@
     "country": "United States",
     "first_seen": "2026-11-24T14:41:00.651893+00:00",
     "last_seen": "2026-11-24T14:41:00.651865+00:00"
+  },
+  {
+    "id": "li:4494175287",
+    "company": "Veolia | North America",
+    "title": "Project Management Office Co-Op",
+    "location": "Boston, MA",
+    "url": "https://www.linkedin.com/jobs/view/project-management-office-co-op-at-veolia-north-america-4494175287",
+    "source": "LinkedIn",
+    "category": "Project Management",
+    "country": "United States",
+    "first_seen": "2026-11-24T12:00:00+00:00",
+    "last_seen": "2026-11-24T17:11:08.796064+00:00"
   },
   {
     "id": "li:4494164154",
