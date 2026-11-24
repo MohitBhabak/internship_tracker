@@ -13,9 +13,10 @@ import sys
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-from job_filters import is_us_or_canada, wanted_title
+from job_filters import is_canadian_ontario_or_remote, is_us_or_canada, wanted_title
 from notifier import send_email
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -59,11 +60,13 @@ def clean_text(raw: str) -> str:
 
 def search_linkedin_query(query: str, location: str) -> list:
     """Fetch recent job postings for one search query in one location on LinkedIn."""
-    # f_TPR=r86400 restricts search to roles posted within the last 24 hours
+    # For Canada, look back up to 96 hours (r345600 seconds) so Canadian Ontario / Remote co-ops
+    # up to 96h old are caught. For US, maintain 24 hours (r86400 seconds) to avoid alert spam.
+    tpr = "r345600" if location == "Canada" else "r86400"
     url = (
         "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?"
         f"keywords={urllib.parse.quote(query)}&location={urllib.parse.quote_plus(location)}"
-        "&f_TPR=r86400&start=0"
+        f"&f_TPR={tpr}&start=0"
     )
     jobs = []
     try:
@@ -96,7 +99,7 @@ def search_linkedin_query(query: str, location: str) -> list:
                 if m_title and m_company and m_link:
                     title = clean_text(m_title.group(1))
                     company = clean_text(m_company.group(1))
-                    location = clean_text(m_loc.group(1)) if m_loc else ""
+                    loc = clean_text(m_loc.group(1)) if m_loc else ""
                     raw_link = m_link.group(1)
                     clean_link = raw_link.split("?")[0]
 
@@ -106,13 +109,23 @@ def search_linkedin_query(query: str, location: str) -> list:
                     m_time = re.search(r"<time[^>]*datetime=\"([^\"]+)\"", c)
                     posted_at = m_time.group(1) if m_time else ""
 
-                    if wanted_title(title) and is_us_or_canada(location):
+                    if wanted_title(title) and is_us_or_canada(loc):
+                        # If fetched via the 96h Canada search, only Ontario or Remote co-ops can exceed 24h
+                        if location == "Canada" and not is_canadian_ontario_or_remote(loc):
+                            if posted_at:
+                                try:
+                                    post_date = datetime.fromisoformat(posted_at.replace("Z", "+00:00"))
+                                    if datetime.now(timezone.utc) - post_date > timedelta(hours=24):
+                                        continue
+                                except Exception:
+                                    pass
+
                         jobs.append(
                             {
                                 "id": job_id,
                                 "company": company,
                                 "title": title,
-                                "location": location,
+                                "location": loc,
                                 "url": clean_link,
                                 "posted_at": posted_at,
                             }

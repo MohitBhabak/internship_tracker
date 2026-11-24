@@ -89,6 +89,20 @@ CANADA_HINT_RE = re.compile(
     re.I,
 )
 
+ONTARIO_HINT_RE = re.compile(
+    r"\bontario\b|"
+    r"\b(toronto|waterloo|ottawa|kitchener|mississauga|markham|hamilton|"
+    r"oakville|brampton|vaughan|burlington|cambridge|guelph|kanata|nepean|"
+    r"richmond hill|barrie|kingston|windsor|scarborough)\b|"
+    r",\s?ON\b|·\s?ON\b|/\s?ON\b|\(ON\)",
+    re.I,
+)
+
+REMOTE_HINT_RE = re.compile(
+    r"\b(remote|virtual|anywhere|telecommute|wfh|work from home)\b",
+    re.I,
+)
+
 NON_US_RE = re.compile(
     r"united kingdom|\buk\b|london|ireland|"
     r"dublin|germany|berlin|munich|france|paris|netherlands|amsterdam|"
@@ -155,3 +169,17 @@ def is_us_or_canada(location: str) -> bool:
 
 # Backward-compatibility alias
 is_us = is_us_or_canada
+
+
+def is_canadian_ontario_or_remote(location: str) -> bool:
+    """True if the location is in Ontario, Canada, or is a Remote/Flexible role accessible in Canada."""
+    if not location:
+        return True
+    if REMOTE_HINT_RE.search(location):
+        return True
+    is_canada = bool(CANADA_HINT_RE.search(location)) or bool(
+        re.search(r"\bcanada\b|,\s*ca\b|\bcan\b", location, re.I)
+    )
+    if not is_canada:
+        return False
+    return bool(ONTARIO_HINT_RE.search(location))

@@ -203,20 +203,52 @@ export default function Dashboard() {
     return schemes[Math.abs(hash) % schemes.length];
   };
 
+  // Helper to determine whether a job is a Canadian Ontario or Remote co-op
+  const isCanadianOntarioOrRemote = (j: Job): boolean => {
+    if (!j.location) return true;
+    // 1. Remote role (open to anywhere / Canada)
+    if (
+      j.country === 'Remote / Flexible' ||
+      /\b(remote|virtual|anywhere|telecommute|wfh|work from home)\b/i.test(j.location)
+    ) {
+      return true;
+    }
+    // 2. Canadian Ontario role
+    const isCanada =
+      j.country === 'Canada' ||
+      /canada|\bcan\b|ontario|toronto|waterloo|ottawa|kitchener|mississauga|markham|,\s*on\b/i.test(j.location);
+    if (!isCanada) return false;
+
+    return (
+      /\b(ontario|toronto|waterloo|ottawa|kitchener|mississauga|markham|hamilton|oakville|brampton|vaughan|burlington|cambridge|guelph|kanata|nepean|richmond hill|barrie|kingston|windsor|scarborough)\b/i.test(j.location) ||
+      /,\s*on\b|·\s*on\b|\/\s*on\b|\(on\)/i.test(j.location)
+    );
+  };
+
   // Filtered and sorted listings
   const filteredJobs = useMemo(() => {
     const now = Date.now();
-    let cutoff = 0;
-    if (timeFilter === '24h') cutoff = now - 24 * 60 * 60 * 1000;
-    else if (timeFilter === '48h') cutoff = now - 48 * 60 * 60 * 1000;
-    else if (timeFilter === '7d') cutoff = now - 7 * 24 * 60 * 60 * 1000;
+    const cutoff24h = now - 24 * 60 * 60 * 1000;
+    const cutoff48h = now - 48 * 60 * 60 * 1000;
+    const cutoff7d = now - 7 * 24 * 60 * 60 * 1000;
+    const cutoff96h = now - 96 * 60 * 60 * 1000;
 
     return jobs
       .filter((j) => {
-        // Time filter
-        if (cutoff > 0) {
-          const seenTime = new Date(j.first_seen).getTime();
+        const isTarget = isCanadianOntarioOrRemote(j);
+        const seenTime = new Date(j.first_seen).getTime();
+
+        // Time filter:
+        // Canadian Ontario OR Remote co-ops appear up to 96 hours old
+        // Standard in-person US/other roles follow the selected 24h / 48h / 7d cutoff
+        if (timeFilter === '24h') {
+          const cutoff = isTarget ? cutoff96h : cutoff24h;
           if (isNaN(seenTime) || seenTime < cutoff) return false;
+        } else if (timeFilter === '48h') {
+          const cutoff = isTarget ? cutoff96h : cutoff48h;
+          if (isNaN(seenTime) || seenTime < cutoff) return false;
+        } else if (timeFilter === '7d') {
+          if (isNaN(seenTime) || seenTime < cutoff7d) return false;
         }
 
         // Search text
@@ -233,8 +265,10 @@ export default function Dashboard() {
           return false;
         }
 
-        // Country
-        if (countryFilter !== 'all' && j.country !== countryFilter) {
+        // Location / Country
+        if (countryFilter === 'on_remote') {
+          if (!isTarget) return false;
+        } else if (countryFilter !== 'all' && j.country !== countryFilter) {
           return false;
         }
 
@@ -266,18 +300,24 @@ export default function Dashboard() {
 
   // Metric counts
   const past24hCount = useMemo(() => {
-    const cutoff = Date.now() - 24 * 60 * 60 * 1000;
+    const now = Date.now();
+    const cutoff24h = now - 24 * 60 * 60 * 1000;
+    const cutoff96h = now - 96 * 60 * 60 * 1000;
     return jobs.filter((j) => {
       const t = new Date(j.first_seen).getTime();
-      return !isNaN(t) && t >= cutoff;
+      if (isNaN(t)) return false;
+      return isCanadianOntarioOrRemote(j) ? t >= cutoff96h : t >= cutoff24h;
     }).length;
   }, [jobs]);
 
   const past48hCount = useMemo(() => {
-    const cutoff = Date.now() - 48 * 60 * 60 * 1000;
+    const now = Date.now();
+    const cutoff48h = now - 48 * 60 * 60 * 1000;
+    const cutoff96h = now - 96 * 60 * 60 * 1000;
     return jobs.filter((j) => {
       const t = new Date(j.first_seen).getTime();
-      return !isNaN(t) && t >= cutoff;
+      if (isNaN(t)) return false;
+      return isCanadianOntarioOrRemote(j) ? t >= cutoff96h : t >= cutoff48h;
     }).length;
   }, [jobs]);
 
@@ -287,6 +327,10 @@ export default function Dashboard() {
       const t = new Date(j.first_seen).getTime();
       return !isNaN(t) && t >= cutoff;
     }).length;
+  }, [jobs]);
+
+  const onRemoteRolesCount = useMemo(() => {
+    return jobs.filter((j) => isCanadianOntarioOrRemote(j)).length;
   }, [jobs]);
 
   const uniqueCompaniesCount = useMemo(() => {
@@ -478,7 +522,7 @@ export default function Dashboard() {
               {past24hCount}
             </div>
             <span className="text-[11px] text-slate-400 mt-0.5 block truncate">
-              Emailed in last 24h
+              24h US · 96h ON & Remote
             </span>
           </button>
 
@@ -504,7 +548,7 @@ export default function Dashboard() {
               {past48hCount}
             </div>
             <span className="text-[11px] text-slate-400 mt-0.5 block truncate">
-              Weekend + Friday drops
+              48h US · 96h ON & Remote
             </span>
           </button>
 
@@ -690,6 +734,7 @@ export default function Dashboard() {
                 className="w-full bg-[#070b16] border border-white/[0.09] rounded-xl px-2.5 py-2 text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500 font-medium"
               >
                 <option value="all">All Locations</option>
+                <option value="on_remote">🍁 Canadian ON & Remote ({onRemoteRolesCount})</option>
                 <option value="United States">🇺🇸 United States</option>
                 <option value="Canada">🇨🇦 Canada ({canadaRolesCount})</option>
                 <option value="Remote / Flexible">🌐 Remote / Flexible</option>
@@ -758,13 +803,13 @@ export default function Dashboard() {
             {timeFilter === '24h' && (
               <span className="text-xs text-amber-300 font-medium bg-amber-500/10 px-2.5 py-0.5 rounded-full border border-amber-500/20 flex items-center gap-1">
                 <Flame className="w-3 h-3 text-amber-400" />
-                Dispatched in past 24 hours
+                Past 24h · Canadian ON & Remote up to 96h
               </span>
             )}
             {timeFilter === '48h' && (
               <span className="text-xs text-sky-300 font-medium bg-sky-500/10 px-2.5 py-0.5 rounded-full border border-sky-500/20 flex items-center gap-1">
                 <Sparkles className="w-3 h-3 text-sky-400" />
-                Past 48 hours (2 Days)
+                Past 48h · Canadian ON & Remote up to 96h
               </span>
             )}
           </div>
@@ -916,6 +961,13 @@ export default function Dashboard() {
                       <span className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-slate-900 text-slate-300 border border-white/[0.08]">
                         {countryFlag(job.country)}
                       </span>
+
+                      {/* 96h Window Badge for Canadian Ontario & Remote */}
+                      {isCanadianOntarioOrRemote(job) && (
+                        <span className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-rose-500/10 text-rose-300 border border-rose-500/25 flex items-center gap-1 font-mono">
+                          <span>🍁</span> 96h Co-op
+                        </span>
+                      )}
                     </div>
                   </div>
 
@@ -991,6 +1043,11 @@ export default function Dashboard() {
                         <span className={`text-[10px] font-medium px-1.5 py-0.2 rounded border ${src.style}`}>
                           {src.label}
                         </span>
+                        {isCanadianOntarioOrRemote(job) && (
+                          <span className="text-[10px] font-medium px-1.5 py-0.2 rounded border bg-rose-500/10 text-rose-300 border-rose-500/25 flex items-center gap-1 font-mono">
+                            🍁 96h Co-op
+                          </span>
+                        )}
                       </div>
                       <h3 className="text-sm font-bold text-white truncate hover:text-blue-300 transition-colors">
                         {job.title}
