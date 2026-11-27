@@ -12,6 +12,30 @@
     "last_seen": "2026-11-27T17:31:11.028747+00:00"
   },
   {
+    "id": "li:4495835761",
+    "company": "BetaNXT",
+    "title": "Intern, Operations as a Service (OPaaS)",
+    "location": "New York, NY",
+    "url": "https://www.linkedin.com/jobs/view/intern-operations-as-a-service-opaas-at-betanxt-4495835761",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-27T12:00:00+00:00",
+    "last_seen": "2026-11-27T17:40:34.005037+00:00"
+  },
+  {
+    "id": "li:4495832805",
+    "company": "BetaNXT",
+    "title": "Intern, Product Management",
+    "location": "New York, NY",
+    "url": "https://www.linkedin.com/jobs/view/intern-product-management-at-betanxt-4495832805",
+    "source": "LinkedIn",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-27T12:00:00+00:00",
+    "last_seen": "2026-11-27T17:40:34.005037+00:00"
+  },
+  {
     "id": "li:4494212256",
     "company": "Growvix",
     "title": "Product Management Intern",
@@ -11974,29 +11998,5 @@
     "country": "United States",
     "first_seen": "2026-10-14T00:10:12.267393+00:00",
     "last_seen": "2026-11-13T00:10:12.267218+00:00"
-  },
-  {
-    "id": "simplify:illinois tool works:product management intern:troy, mi",
-    "company": "Illinois Tool Works",
-    "title": "Product Management Intern",
-    "location": "Troy, MI",
-    "url": "https://itw.wd5.myworkdayjobs.com/external/job/Troy---101-Trade-Sq-E/Product-Management-Intern---Summer-2026_JR10105?utm_source=Simplify&ref=Simplify",
-    "source": "Simplify",
-    "category": "Product Management (PM)",
-    "country": "United States",
-    "first_seen": "2026-10-13T16:10:13.219640+00:00",
-    "last_seen": "2026-11-12T16:10:13.219607+00:00"
-  },
-  {
-    "id": "wd:rjet.wd108.myworkdayjobs.com:job/Carmel-Headquarters/Talent-Acquisition-Operations-Interns---Summer-2027_JR-007627",
-    "company": "Rjet",
-    "title": "Talent Acquisition Operations Interns - Summer 2027",
-    "location": "Carmel Headquarters",
-    "url": "https://rjet.wd108.myworkdayjobs.com/en-US/External_Career_Site/job/Carmel-Headquarters/Talent-Acquisition-Operations-Interns---Summer-2027_JR-007627",
-    "source": "Workday",
-    "category": "Operations",
-    "country": "Remote / Flexible",
-    "first_seen": "2026-10-12T22:21:15.980768+00:00",
-    "last_seen": "2026-11-08T22:21:15.980429+00:00"
   }
 ]
