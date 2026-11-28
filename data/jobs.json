@@ -1,5 +1,17 @@
 [
   {
+    "id": "li:4488418930",
+    "company": "Center for Internet Security",
+    "title": "Marketing Operations Intern - Remote",
+    "location": "United States",
+    "url": "https://www.linkedin.com/jobs/view/marketing-operations-intern-remote-at-center-for-internet-security-4488418930",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-28T12:00:00+00:00",
+    "last_seen": "2026-11-28T12:50:20.887250+00:00"
+  },
+  {
     "id": "li:4470981701",
     "company": "Qualitrol",
     "title": "Operations & Manufacturing Co-Op (Spring 2027)",
@@ -11986,17 +11998,5 @@
     "country": "United States",
     "first_seen": "2026-11-05T06:01:04.691650+00:00",
     "last_seen": "2026-11-20T06:01:04.691627+00:00"
-  },
-  {
-    "id": "wd:theirc.wd1.myworkdayjobs.com:job/Salt-Lake-City-UT-USA/Health-Program-Intern_JR00005853",
-    "company": "Theirc",
-    "title": "Health Program Intern",
-    "location": "Salt Lake City, UT USA",
-    "url": "https://theirc.wd1.myworkdayjobs.com/en-US/External_Careers/job/Salt-Lake-City-UT-USA/Health-Program-Intern_JR00005853",
-    "source": "Workday",
-    "category": "Other",
-    "country": "United States",
-    "first_seen": "2026-11-04T22:21:15.980825+00:00",
-    "last_seen": "2026-11-08T22:21:15.980429+00:00"
   }
 ]
