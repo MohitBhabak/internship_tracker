@@ -1,5 +1,17 @@
 [
   {
+    "id": "simplify:intercept:product co-op:toronto, on, canada",
+    "company": "Intercept",
+    "title": "Product Co-op",
+    "location": "Toronto, ON, Canada",
+    "url": "https://intercept.bamboohr.com/careers/48/?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "Canada",
+    "first_seen": "2026-11-28T00:10:15.978087+00:00",
+    "last_seen": "2026-11-28T00:10:15.978060+00:00"
+  },
+  {
     "id": "wd:sunlife.wd3.myworkdayjobs.com:job/Toronto-Ontario/Student--Advisor-Recruitment-Marketing---Program-Coordinator_JR00130117",
     "company": "Sunlife",
     "title": "Student, Advisor Recruitment Marketing & Program Coordinator",
@@ -11986,17 +11998,5 @@
     "country": "United States",
     "first_seen": "2026-10-25T11:40:20.988200+00:00",
     "last_seen": "2026-11-24T11:40:20.988166+00:00"
-  },
-  {
-    "id": "simplify:merck:future talent program intern - ai/ml biomedical imaging and computational pathology 🎓:cambridge, ma",
-    "company": "Merck",
-    "title": "Future Talent Program Intern - AI/ML Biomedical Imaging and Computational Pathology 🎓",
-    "location": "Cambridge, MA",
-    "url": "https://msd.wd5.myworkdayjobs.com/searchjobs/job/USA---Massachusetts---Cambridge-320-Bent-Street/XMLNAME-2027-Future-Talent-Program---AI-ML-Biomedical-Imaging-and-Computational-Pathology---Intern_R423515?utm_source=Simplify&ref=Simplify",
-    "source": "Simplify",
-    "category": "Other",
-    "country": "United States",
-    "first_seen": "2026-10-23T22:20:10.507709+00:00",
-    "last_seen": "2026-11-08T22:20:10.507462+00:00"
   }
 ]
