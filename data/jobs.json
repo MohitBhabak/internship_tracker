@@ -1,5 +1,17 @@
 [
   {
+    "id": "li:4479178027",
+    "company": "Dorman Products",
+    "title": "Heavy Duty Product Intern",
+    "location": "Colmar, PA",
+    "url": "https://www.linkedin.com/jobs/view/heavy-duty-product-intern-at-dorman-products-4479178027",
+    "source": "LinkedIn",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-28T12:00:00+00:00",
+    "last_seen": "2026-11-28T09:20:26.127965+00:00"
+  },
+  {
     "id": "simplify:state street:data engineering & product intern:quincy, ma",
     "company": "State Street",
     "title": "Data Engineering & Product Intern",
@@ -11986,17 +11998,5 @@
     "country": "United States",
     "first_seen": "2026-10-30T21:11:04.895780+00:00",
     "last_seen": "2026-11-09T21:11:04.895759+00:00"
-  },
-  {
-    "id": "wd:hntb.wd5.myworkdayjobs.com:job/Dallas-TX/Construction-Project---Program-Management-Intern--Summer-2027-_R-31478-1",
-    "company": "Hntb",
-    "title": "Construction Project & Program Management Intern (Summer 2027)",
-    "location": "2 Locations",
-    "url": "https://hntb.wd5.myworkdayjobs.com/en-US/hntb_careers/job/Dallas-TX/Construction-Project---Program-Management-Intern--Summer-2027-_R-31478-1",
-    "source": "Workday",
-    "category": "Project Management",
-    "country": "Remote / Flexible",
-    "first_seen": "2026-10-27T19:31:51.497801+00:00",
-    "last_seen": "2026-11-10T19:31:51.497781+00:00"
   }
 ]
