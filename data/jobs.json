@@ -4872,6 +4872,18 @@
     "last_seen": "2026-11-19T10:01:07.827517+00:00"
   },
   {
+    "id": "simplify:highmark health:product management and development intern:51 locationsnew mexico · washington · kansas · pennsylvania · north dakota · oregon · delaware · iowa · california · washington, dc · vermont · wyoming · connecticut · texas · montana · florida · new hampshire · nevada · south carolina · south dakota · georgia · arizona · mississippi · tennessee · virginia · arkansas · minnesota · colorado · nebraska · rhode island · utah · kentucky · west virginia · nyc · maryland · hawaii · wisconsin · maine · massachusetts · north carolina · oklahoma · missouri · ohio · new jersey · indiana · louisiana · alaska · michigan · illinois · alabama · idaho",
+    "company": "Highmark Health",
+    "title": "Product Management and Development Intern",
+    "location": "51 locationsNew Mexico · Washington · Kansas · Pennsylvania · North Dakota · Oregon · Delaware · Iowa · California · Washington, DC · Vermont · Wyoming · Connecticut · Texas · Montana · Florida · New Hampshire · Nevada · South Carolina · South Dakota · Georgia · Arizona · Mississippi · Tennessee · Virginia · Arkansas · Minnesota · Colorado · Nebraska · Rhode Island · Utah · Kentucky · West Virginia · NYC · Maryland · Hawaii · Wisconsin · Maine · Massachusetts · North Carolina · Oklahoma · Missouri · Ohio · New Jersey · Indiana · Louisiana · Alaska · Michigan · Illinois · Alabama · Idaho",
+    "url": "https://highmarkhealth.wd1.myworkdayjobs.com/highmark/job/PA-Working-at-Home---Pennsylvania/Summer-2027-Product-Management-and-Development-Intern_J287159?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-19T01:36:53.665840+00:00",
+    "last_seen": "2026-11-28T01:36:53.665810+00:00"
+  },
+  {
     "id": "simplify:lucid:product management intern:raleigh, nc",
     "company": "Lucid",
     "title": "Product Management Intern",
@@ -6226,6 +6238,18 @@
     "country": "United States",
     "first_seen": "2026-11-17T12:00:00+00:00",
     "last_seen": "2026-11-17T00:30:42.447792+00:00"
+  },
+  {
+    "id": "simplify:great american insurance company:technical product management intern - summer 2027:cincinnati, oh",
+    "company": "Great American Insurance Company",
+    "title": "Technical Product Management Intern - Summer 2027",
+    "location": "Cincinnati, OH",
+    "url": "https://gaig.wd1.myworkdayjobs.com/GAIG_External/job/Cincinnati-OH-USA/Technical-Product-Management-Intern---Summer-2027_R9883-1?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Product Management (PM)",
+    "country": "United States",
+    "first_seen": "2026-11-17T01:36:53.666133+00:00",
+    "last_seen": "2026-11-28T01:36:53.665810+00:00"
   },
   {
     "id": "simplify:servicenow:inbound product manager intern 🎓:san diego, ca",
@@ -11974,29 +11998,5 @@
     "country": "United States",
     "first_seen": "2026-10-27T18:41:03.818158+00:00",
     "last_seen": "2026-11-10T18:41:03.818134+00:00"
-  },
-  {
-    "id": "wd:abb.wd3.myworkdayjobs.com:job/USA-NM-Albuquerque/Finance-Operations-Intern---Summer-2027_JR00048203",
-    "company": "Abb",
-    "title": "Finance Operations Intern – Summer 2027",
-    "location": "USA, NM, Albuquerque",
-    "url": "https://abb.wd3.myworkdayjobs.com/en-US/external_career_page/job/USA-NM-Albuquerque/Finance-Operations-Intern---Summer-2027_JR00048203",
-    "source": "Workday",
-    "category": "Operations",
-    "country": "United States",
-    "first_seen": "2026-10-27T16:02:03.758270+00:00",
-    "last_seen": "2026-11-19T16:02:03.758241+00:00"
-  },
-  {
-    "id": "wd:highmarkhealth.wd1.myworkdayjobs.com:job/PA-Working-at-Home---Pennsylvania/Summer-2027-Quality-Lead-Operations-enGen-Undergraduate-Intern_J289841",
-    "company": "Highmarkhealth",
-    "title": "Summer 2027 Quality Lead/Operations enGen Undergraduate Intern",
-    "location": "51 Locations",
-    "url": "https://highmarkhealth.wd1.myworkdayjobs.com/en-US/highmark/job/PA-Working-at-Home---Pennsylvania/Summer-2027-Quality-Lead-Operations-enGen-Undergraduate-Intern_J289841",
-    "source": "Workday",
-    "category": "Operations",
-    "country": "Remote / Flexible",
-    "first_seen": "2026-10-26T20:41:50.820889+00:00",
-    "last_seen": "2026-11-09T20:41:50.820866+00:00"
   }
 ]
