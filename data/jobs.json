@@ -2088,6 +2088,18 @@
     "last_seen": "2026-11-24T11:11:01.801726+00:00"
   },
   {
+    "id": "simplify:philips:marketing operations analyst intern:cambridge, ma",
+    "company": "Philips",
+    "title": "Marketing Operations Analyst Intern",
+    "location": "Cambridge, MA",
+    "url": "https://philips.wd3.myworkdayjobs.com/jobs-and-careers/job/Cambridge-US-Massachusetts-United-States/Intern---Marketing-Operations---Cambridge--MA---Summer-2027_593642?utm_source=Simplify&ref=Simplify",
+    "source": "Simplify",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-24T02:40:14.885292+00:00",
+    "last_seen": "2026-11-28T02:40:14.885261+00:00"
+  },
+  {
     "id": "wd:rbc.wd3.myworkdayjobs.com:job/Minneapolis-Minnesota-United-States-of-America/Summer-2027-Wealth-Management-Operations-Internship_R-0000187994-2",
     "company": "Rbc",
     "title": "Summer 2027 Wealth Management Operations Internship",
@@ -11986,17 +11998,5 @@
     "country": "Remote / Flexible",
     "first_seen": "2026-10-27T19:31:51.497801+00:00",
     "last_seen": "2026-11-10T19:31:51.497781+00:00"
-  },
-  {
-    "id": "wd:elkay.wd1.myworkdayjobs.com:job/Erie-PA/Operations---Supply-Chain-Intern---Summer-2027_REQ-020114",
-    "company": "Elkay",
-    "title": "Operations & Supply Chain Intern - Summer 2027",
-    "location": "Erie, PA",
-    "url": "https://elkay.wd1.myworkdayjobs.com/en-US/Elkay_External/job/Erie-PA/Operations---Supply-Chain-Intern---Summer-2027_REQ-020114",
-    "source": "Workday",
-    "category": "Operations",
-    "country": "United States",
-    "first_seen": "2026-10-27T18:41:03.818158+00:00",
-    "last_seen": "2026-11-10T18:41:03.818134+00:00"
   }
 ]
