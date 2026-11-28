@@ -1,5 +1,17 @@
 [
   {
+    "id": "li:4477337372",
+    "company": "Susquehanna International Group",
+    "title": "Trading Operations Co-op with Drexel University",
+    "location": "Bala-Cynwyd, PA",
+    "url": "https://www.linkedin.com/jobs/view/trading-operations-co-op-with-drexel-university-at-susquehanna-international-group-4477337372",
+    "source": "LinkedIn",
+    "category": "Operations",
+    "country": "United States",
+    "first_seen": "2026-11-28T12:00:00+00:00",
+    "last_seen": "2026-11-28T09:28:26.516689+00:00"
+  },
+  {
     "id": "li:4479178027",
     "company": "Dorman Products",
     "title": "Heavy Duty Product Intern",
@@ -11986,17 +11998,5 @@
     "country": "Canada",
     "first_seen": "2026-10-31T05:01:10.774760+00:00",
     "last_seen": "2026-11-11T05:01:10.774732+00:00"
-  },
-  {
-    "id": "wd:amgen.wd1.myworkdayjobs.com:job/United-States---Remote/Undergrad-Intern---Global-Program-Management--Summer-2027-_R-260084",
-    "company": "Amgen",
-    "title": "Undergrad Intern – Global Program Management (Summer 2027)",
-    "location": "United States - Remote",
-    "url": "https://amgen.wd1.myworkdayjobs.com/en-US/careers/job/United-States---Remote/Undergrad-Intern---Global-Program-Management--Summer-2027-_R-260084",
-    "source": "Workday",
-    "category": "Other",
-    "country": "United States",
-    "first_seen": "2026-10-30T21:11:04.895780+00:00",
-    "last_seen": "2026-11-09T21:11:04.895759+00:00"
   }
 ]
